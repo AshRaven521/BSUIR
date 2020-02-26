@@ -1,0 +1,5 @@
+﻿  2.2(6).cpp
+C:\PTUIR\2 semestr\Programming\Projects\Lr2\2.2(6)\2.2(6)\2.2(6)\2.2(6).cpp(48,10): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+C:\PTUIR\2 semestr\Programming\Projects\Lr2\2.2(6)\2.2(6)\2.2(6)\2.2(6).cpp(76,23): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+C:\PTUIR\2 semestr\Programming\Projects\Lr2\2.2(6)\2.2(6)\2.2(6)\2.2(6).cpp(76,45): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+  2.2(6).vcxproj -> C:\PTUIR\2 semestr\Programming\Projects\Lr2\2.2(6)\2.2(6)\Debug\2.2(6).exe
