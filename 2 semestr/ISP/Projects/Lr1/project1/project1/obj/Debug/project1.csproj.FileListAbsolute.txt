@@ -4,3 +4,9 @@ C:\PTUIR\2 semestr\ISP\Labs\Lr1\project1\project1\bin\Debug\project1.pdb
 C:\PTUIR\2 semestr\ISP\Labs\Lr1\project1\project1\obj\Debug\project1.csprojAssemblyReference.cache
 C:\PTUIR\2 semestr\ISP\Labs\Lr1\project1\project1\obj\Debug\project1.exe
 C:\PTUIR\2 semestr\ISP\Labs\Lr1\project1\project1\obj\Debug\project1.pdb
+C:\project1\project1\bin\Debug\project1.exe.config
+C:\project1\project1\bin\Debug\project1.exe
+C:\project1\project1\bin\Debug\project1.pdb
+C:\project1\project1\obj\Debug\project1.exe
+C:\project1\project1\obj\Debug\project1.pdb
+C:\project1\project1\obj\Debug\project1.csprojAssemblyReference.cache
