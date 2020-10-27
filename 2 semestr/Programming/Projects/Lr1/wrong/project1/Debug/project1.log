@@ -1,3 +1,0 @@
-﻿  project1.cpp
-C:\PTUIR\2 semestr\Programming\Projects\Lr1\project1\project1\project1.cpp(47,25): warning C4805: ==: небезопасное смешение типа "bool" и типа "float" в операции
-  project1.vcxproj -> C:\PTUIR\2 semestr\Programming\Projects\Lr1\project1\Debug\project1.exe

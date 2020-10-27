@@ -1,6 +1,0 @@
-C:\PTUIR\2 semestr\ISP\Projects\Lr4\project4\project4\bin\Debug\project4.exe.config
-C:\PTUIR\2 semestr\ISP\Projects\Lr4\project4\project4\bin\Debug\project4.exe
-C:\PTUIR\2 semestr\ISP\Projects\Lr4\project4\project4\bin\Debug\project4.pdb
-C:\PTUIR\2 semestr\ISP\Projects\Lr4\project4\project4\obj\Debug\project4.csprojAssemblyReference.cache
-C:\PTUIR\2 semestr\ISP\Projects\Lr4\project4\project4\obj\Debug\project4.exe
-C:\PTUIR\2 semestr\ISP\Projects\Lr4\project4\project4\obj\Debug\project4.pdb
