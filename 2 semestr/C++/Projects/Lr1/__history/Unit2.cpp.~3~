@@ -1,0 +1,70 @@
+//---------------------------------------------------------------------------
+
+
+#pragma hdrstop
+
+#include "Unit2.h"
+
+//---------------------------------------------------------------------------
+
+RectangleMy::RectangleMy(int a,int b,int c,int d)
+{
+	xRect1=a;
+	yRect1=b;
+	xRect2=c;
+	yRect2=d;
+}
+
+void RectangleMy::show(TCanvas *Canvas)//показываем,что метод show принадлежит классу RectangleMy
+{
+  Canvas -> Pen -> Color=clYellow;
+  Canvas -> Brush ->Color=clYellow;
+  Canvas -> Rectangle(xRect1,yRect1,xRect2,yRect2);
+  Canvas -> Pen -> Color=clRed;
+  Canvas -> Brush ->Color=clRed;
+}
+
+void RectangleMy::move(TCanvas *Canvas)
+{
+	yRect1+=5;
+	yRect2+=5;
+}
+
+void RectangleMy::moveBack(TCanvas *Canvas)
+{
+	yRect1-=5;
+	yRect2-=5;
+}
+
+void RectangleMy::hide(TCanvas *Canvas)
+{
+	Canvas -> Pen -> Color=clWhite;
+	Canvas -> Brush -> Color=clWhite;
+	Canvas -> Rectangle(xRect1,yRect1,xRect2,yRect2);
+}
+
+flagman::flagman(): RectangleMy(20,20,50,50)
+{
+
+}
+
+void flagman::ShowMan(TCanvas *Canvas)
+{
+	Canvas -> Pen -> Color=clBlue;
+	Canvas -> Brush ->Color=clBlue;
+	Canvas -> Rectangle(72,40,88,58);
+	Canvas -> Rectangle(70,60,90,110);
+	Canvas -> Rectangle(70,112,78,138);
+	Canvas -> Rectangle(82,112,90,138);
+	Canvas -> Rectangle(50,60,68,65);
+	Canvas -> Rectangle(92,60,110,65);
+}
+
+void flagman::ShowWood(TCanvas *Canvas)
+{
+	Canvas -> Pen -> Color=clRed;
+	Canvas -> Brush ->Color=clRed;
+	Canvas -> Rectangle(51,20,55,68);
+}
+
+#pragma package(smart_init)

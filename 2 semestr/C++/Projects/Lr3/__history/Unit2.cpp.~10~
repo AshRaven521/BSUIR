@@ -1,0 +1,74 @@
+//---------------------------------------------------------------------------
+
+
+#pragma hdrstop
+
+#include "Unit2.h"
+void List::AddList(std::string str,int a,int b)
+{
+	/*Products *t;
+	t=head;
+	t->next = new Products;
+	t = t->next;
+	t->name = str ;
+	t->quantity = a;
+	t->WorkNumber = b;
+	t->next = NULL; */
+	Products *temp = new Products;//При каждом вызове выделяется память
+	temp->name = str ;
+	temp->quantity = a;
+	temp->WorkNumber = b; //Записываем x в элемент структуры  element (в x структуры element)
+	temp->next = head; //Указываем, что след. элемент это объект по адресу Head
+	head = temp;
+	size++;
+	current++;
+}
+
+Products* List::DeleteUzel()
+{
+	Products* ptrDelete = NULL;
+	Products* ptrPrev = NULL;
+
+	ptrDelete = head;
+
+	head = ptrDelete->next;
+	delete ptrDelete;
+
+	ptrPrev->next = ptrDelete->next;
+	delete ptrDelete;
+
+	ptrPrev = ptrDelete;
+	ptrDelete = ptrDelete->next;
+}
+
+void List::Show() //Функция отображения списка на экране
+{
+  Products *temp = head;//Определяем указатель, который изначально он равен адресу начала списка
+
+
+ while (temp != NULL)//До тех пор пока не встретит пустое значение
+ {
+  //cout << temp->x << " ";//Выведет элемент x из списка
+  temp = temp->next;//Указываем, что далее нам нужен следующий элемент
+ }
+}
+
+Products* List::Pop(const int N)//В качестве параметра принимается номер извлекаемого элемента
+{
+	Products *temp = head; //Обращаемся к началу списка
+	if ((head != NULL) && (N < size))//Делаем проверку на то что список не пуст и N не превышает число его элементов
+	{
+		for (int i=0; i<N; i++)
+		{
+		temp = temp->next;//Меняем адрес N раз
+		}
+		//cout << temp-> x << " " << endl;//Выводим N элемент списка на экран
+		return temp;//возвращает элемент с номером,который мы передаем
+	}
+	return head;
+	//cout << endl;
+}
+
+//---------------------------------------------------------------------------
+
+#pragma package(smart_init)

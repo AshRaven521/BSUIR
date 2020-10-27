@@ -1,0 +1,59 @@
+//---------------------------------------------------------------------------
+#include <string>
+#ifndef Unit2H
+#define Unit2H
+
+class Products
+{
+  public:
+	std::string name;
+	int quantity;
+	int WorkNumber;
+	Products *next;//указатель на следующий узел
+
+	Products()
+	{
+		name="";
+		quantity=0;
+		WorkNumber=0;
+	}
+};
+
+class List
+{
+   public:
+	Products *head;//указатель на корневой узел
+	int size,current;
+					   //Объявлена функция извлечения элемента
+
+	//конструктор:
+	List()
+	{
+		head=new Products;
+		head->next=NULL;
+		size=0;
+		current=0
+	}
+
+	//деструктор:
+	~List()
+	{
+		while (head!=NULL)          //Пока по адресу не пусто
+	 {
+		Products *temp = head->next;   //Временная переменная для хранения адреса следующего элемента
+		delete head;                //Освобождаем адрес обозначающий начало
+		head = temp;                  //Меняем адрес на следующий
+	 }
+	}
+
+	void AddList(std::string str,int a,int b);//передаем аргументы для изменения полей
+
+	Products* DeleteUzel();
+	void Show();
+	void Pop(int N);
+	int Count() {return size;};
+};
+
+
+//---------------------------------------------------------------------------
+#endif

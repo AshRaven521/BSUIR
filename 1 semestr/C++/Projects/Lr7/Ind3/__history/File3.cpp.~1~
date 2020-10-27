@@ -1,0 +1,108 @@
+//---------------------------------------------------------------------------
+
+#pragma hdrstop
+
+#include <tchar.h>
+#include <iostream.h>
+#include <conio.h>
+#include <math.h>
+#include <windows.h>
+//---------------------------------------------------------------------------
+
+#pragma argsused
+char *perevodvobr(char *);
+char *slozhenie(char *,char *);
+int _tmain(int argc, _TCHAR* argv[])
+{
+  char a[10];
+  char b[10];
+  char *vyzov1=new char[11];
+  char *vyzov2=new char[11];
+  char *vyzov3=new char[11];
+SetConsoleCP(1251);
+SetConsoleOutputCP(1251);
+  cout<<"¬ведите первое двоичное число,заданное в естественной форме : ";
+  cin>>a;
+  cout<<"¬ведите второе двоичное число,заданное в естественной форме : ";
+  cin>>b;
+	//vyzov1=perevodvobr(a);
+	//vyzov2=perevodvobr(b);
+	vyzov3=slozhenie(perevodvobr(a),perevodvobr(b));
+	cout<<"\n–езультат сложени€ в обратном коде :"<<vyzov3;
+	getch();
+	return 0;
+}
+  char *perevodvobr(char *aA)
+	{
+		char c[11]="0,00000000\0";
+		int i=0;
+		int j=2;
+		  while(aA[i]!='\0')
+			{
+			   if(aA[0]=='-')
+				 {
+					c[0]='1';
+					if(i>0)
+					{
+						if(aA[i]=='0')
+						{
+							 c[j]='1';
+						 }
+						else
+						  {
+							  c[j]='0';
+						  }
+						j++;
+					}
+				 }
+			   else
+				 {
+				   c[j]=aA[i];
+				   j++;
+				 }
+				i++;
+			}
+		return c;
+	}
+
+	char *slozhenie(char *x,char *y)
+	  {
+		char result[11]="0,00000000\0";
+		  for(int i=9;i>=2;i--)
+			{
+				if((x[i]=='1' && y[i]=='0') || (x[i]=='0' && y[i]=='1'))
+				  {
+					if(result[i]=='1')
+					  {
+						  result[i]='0';
+						  result[i-1]='1';
+					  }
+					  else
+					  {
+						result[i]='1';
+					  }
+				  }
+
+
+				if(x[i]=='0' && y[i]=='0')
+				  {
+					if(result[i]!='1')
+					  result[i]='0';
+				  }
+				if(x[i]=='1' && y[i]=='1')
+				  {
+					if(result[i]!='1')
+					  {
+					  result[i]='0';
+					  result[i-1]='1';
+					  }
+					else
+					  {
+						result[i]='1';
+						result[i-1]='1';
+					  }
+				  }
+			}
+		  return result;
+	  }
+//---------------------------------------------------------------------------

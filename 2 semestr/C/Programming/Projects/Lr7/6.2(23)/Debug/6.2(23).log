@@ -1,0 +1,5 @@
+﻿  6.2(23).cpp
+C:\PTUIR\2 semestr\Programming\Projects\Lr7\6.2(23)\6.2(23).cpp(197,6): warning C4101: current: неиспользованная локальная переменная
+C:\PTUIR\2 semestr\Programming\Projects\Lr7\6.2(23)\6.2(23).cpp(355): warning C4172: возвращение адреса локальной или временной переменной : temp
+C:\PTUIR\2 semestr\Programming\Projects\Lr7\6.2(23)\6.2(23).cpp(364): warning C4172: возвращение адреса локальной или временной переменной : temp
+  6.2(23).vcxproj -> C:\PTUIR\2 semestr\Programming\Projects\Lr7\6.2(23)\Debug\6.2(23).exe

@@ -1,0 +1,8 @@
+﻿Выполняется удаление сборки 'C:\PTUIR\3 semestr\ISP\Lr2\Lr2WindowsService\bin\Debug\Lr2WindowsService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\PTUIR\3 semestr\ISP\Lr2\Lr2WindowsService\bin\Debug\Lr2WindowsService.InstallLog
+   assemblypath = C:\PTUIR\3 semestr\ISP\Lr2\Lr2WindowsService\bin\Debug\Lr2WindowsService.exe
+Выполняется удаление источника EventLog Lr2 Windows Service.
+Выполняется удаление службы Lr2 Windows Service из системы...
+Служба Lr2 Windows Service успешно удалена из системы.

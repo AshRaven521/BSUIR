@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.155,C:\Users\ivank\Documents\RAD Studio\Projects\File1.h=C:\Users\ivank\Documents\RAD Studio\Projects\DLLSHB.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.171,=C:\Users\ivank\Documents\RAD Studio\Projects\File1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.183,C:\Users\ivank\Documents\RAD Studio\Projects\DLLSH.cpp=C:\PTUIR\OAiP\Laboratories\Projects\Lr5\Ind2\DLLSH.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.119,C:\Users\ivank\Documents\RAD Studio\Projects\Project1.cbproj=C:\Users\ivank\Documents\RAD Studio\Projects\MyDLL.cbproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.238,C:\Users\ivank\Documents\RAD Studio\Projects\File1.cpp=C:\Users\ivank\Documents\RAD Studio\Projects\DLLSH.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.926,=C:\Users\ivank\Documents\RAD Studio\Projects\File1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.822,C:\Users\ivank\Documents\RAD Studio\Projects\DLLSHB.h=C:\PTUIR\OAiP\Laboratories\Projects\Lr5\Ind2\DLLSHB.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.632,C:\Users\ivank\Documents\RAD Studio\Projects\MyDLL.cbproj=C:\PTUIR\OAiP\Laboratories\Projects\Lr5\Ind2\MyDLL.cbproj</Transaction>
+  </Transactions>
+</BorlandProject>

@@ -1,0 +1,6 @@
+C:\PTUIR\2 semestr\ISP\Projects\Lr6\project6\project6\obj\Debug\university.csprojAssemblyReference.cache
+C:\PTUIR\2 semestr\ISP\Projects\Lr6\project6\project6\bin\Debug\project6.exe.config
+C:\PTUIR\2 semestr\ISP\Projects\Lr6\project6\project6\bin\Debug\project6.exe
+C:\PTUIR\2 semestr\ISP\Projects\Lr6\project6\project6\bin\Debug\project6.pdb
+C:\PTUIR\2 semestr\ISP\Projects\Lr6\project6\project6\obj\Debug\project6.exe
+C:\PTUIR\2 semestr\ISP\Projects\Lr6\project6\project6\obj\Debug\project6.pdb

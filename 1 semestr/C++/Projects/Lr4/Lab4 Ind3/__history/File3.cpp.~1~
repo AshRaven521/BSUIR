@@ -1,0 +1,62 @@
+//---------------------------------------------------------------------------
+
+#include <vcl.h>
+#pragma hdrstop
+
+#include <tchar.h>
+#include <math.h>
+#include <iostream.h>
+#include <conio.h>
+#include <windows.h>
+//---------------------------------------------------------------------------
+
+#pragma argsused
+int _tmain(int argc, _TCHAR* argv[])
+{
+  SetConsoleCP(1251);
+  SetConsoleOutputCP(1251);
+   const int N=3;
+	int **mas = new int *[N];
+	 bool bo;
+	 int s,sq;
+
+for (int i = 0; i < N; i++)
+{
+  mas[i] = new int [N];
+}
+
+
+   int i,j;
+	  for(i=0; i<N; i++)
+		{
+			for(j=0; j<N; j++)
+			  {
+				  cout<<"¬ведите mas["<<i<<j<<"]=";
+				  cin>>mas[i][j];
+			  }
+		}
+			 for(i=0; i<N; i++)
+			   {
+			   s=0;
+				   for(j=0; j<N; j++)
+					 {
+						sq=pow(mas[i][j],2);
+						s=s+sq;
+						   if(s!=1) bo=false;
+					 }
+			   }
+
+
+
+
+
+
+
+for (int i = 0; i < N; i++) {
+  delete []mas[i];
+}
+delete []mas;
+	getch();
+	return 0;
+}
+//---------------------------------------------------------------------------

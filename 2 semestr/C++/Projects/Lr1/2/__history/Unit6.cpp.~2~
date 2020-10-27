@@ -1,0 +1,30 @@
+//---------------------------------------------------------------------------
+
+
+#pragma hdrstop
+
+#include "Unit6.h"
+
+   double kvadrat::calc_square()
+	 {
+		 double s=pow(AB,2);
+
+		 return s;
+	 }
+
+   double kvadrat::calc_perimetr()
+	 {
+		 double p=AB * 4;
+
+		 return p;
+	 }
+
+   void mass_centre()
+	 {
+		x0=x/2;
+		y0y/2;
+	 }
+
+//---------------------------------------------------------------------------
+
+#pragma package(smart_init)

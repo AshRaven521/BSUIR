@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+  <Transactions>
+    <Transaction>2019.12.02 22:33:48.070,=C:\Users\ivank\Documents\RAD Studio\Projects\File1.cpp</Transaction>
+    <Transaction>2019.12.02 23:20:16.185,C:\PTUIR\OAiP\Laboratories\Projects\Lr7\Ind2\File2.cpp=C:\Users\ivank\Documents\RAD Studio\Projects\File1.cpp</Transaction>
+    <Transaction>2019.12.02 23:20:24.488,C:\PTUIR\OAiP\Laboratories\Projects\Lr7\Ind2\Project2.cbproj=C:\Users\ivank\Documents\RAD Studio\Projects\Project1.cbproj</Transaction>
+  </Transactions>
+</BorlandProject>

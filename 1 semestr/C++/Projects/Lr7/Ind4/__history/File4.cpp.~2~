@@ -1,0 +1,232 @@
+//---------------------------------------------------------------------------
+
+#pragma hdrstop
+
+#include <tchar.h>
+#include <iostream.h>
+#include <conio.h>
+#include <windows.h>
+#include <math.h>
+//---------------------------------------------------------------------------
+
+#pragma argsused
+char *sum(char*,char*);
+char *sub(char*,char*);
+int perevodvint(char);
+char *sameznach(char*);
+char perevodvchar(int);
+int sravnenie(char *,char *);
+int _tmain(int argc, _TCHAR* argv[])
+{
+//сделать проверку в сложении на ввод числа с -;
+//проверить как делается вычитание;
+SetConsoleCP(1251);
+SetConsoleOutputCP(1251);
+char str1[9];
+char str2[9];
+char *dec;
+char *bec;
+char x1[9],x2[9],x3[9];
+char* sumR;
+char* subR;
+char y1[9],y2[9];
+int bigg;
+cout<<"Введите первое число в двенадцатеричной системе счисления :";
+cin>>str1;
+cout<<"Введите второе число в двенадцатеричной системе счисления :";
+cin>>str2;
+  bigg=sravnenie(str1,str2);
+	if(bigg==0 || bigg==2)
+	  {
+		int i=0;
+		  while(str1[i]!='\0')
+			{
+			   y1[i]=str1[i];
+			   i++;
+			}
+		int j=0;
+		  while(str2[j]!='\0')
+			{
+				y2[j]=str2[j];
+				j++;
+			}
+	  }
+	if(bigg==1)
+	  {
+		int i=0;
+		  while(str1[i]!='\0')
+			{
+			   y1[i]=str2[i];
+			   i++;
+			}
+		int j=0;
+		  while(str2[j]!='\0')
+			{
+				y2[j]=str1[j];
+				j++;
+			}
+	  }
+  dec=sameznach(y1);
+  for(int f=0;f<9;f++)
+	x1[f]=dec[f];
+  bec=sameznach(y2);
+  for(int f=0;f<9;f++)
+	x2[f]=bec[f];
+	sumR=sum(x1,x2);
+	int k=0;
+	for(int f=0;f<9;f++)
+	{
+		if(sumR[f]!='0')
+		{
+			x3[k]=sumR[f];
+			k++;
+		}
+	}
+cout<<"\nРезультат сложения :"<<x3;
+subR=sub(x1,x2);
+	int m=0;
+	for(int e=0;e<9;e++)
+	{
+		if(subR[e]!='0')
+		{
+			x3[m]=subR[e];
+			m++;
+		}
+	}
+	if(bigg==1)
+	  {
+		 cout<<"\nРезультат вычитания : - "<<x3;
+	  }
+	else
+	{
+	   cout<<"\nРезультат вычитания :"<<x3;
+	}
+	getch();
+	return 0;
+}
+  char *sum(char str1x[9],char str2y[9])
+	{
+		char result[9]="00000000\0";
+		for(int i=7;i>0;i--)
+		  {
+			  int a=perevodvint(str1x[i]);
+			  int b=perevodvint(str2y[i]);
+			  int r=a+b;
+				if(result[i]=='1')
+				  {
+					  r=r+1;
+				  }
+				if(r>=12)
+				  {
+					r=r-12;
+					result[i-1]='1';
+				  }
+			  result[i]=perevodvchar(r);
+		  }
+	  return result;
+	}
+  int perevodvint(char x)
+	{
+		int a=0;
+		switch(x)
+		  {
+			  case 'A': a=10;break;
+			  case 'B': a=11;break;
+			  default : a=x-'0';break;
+		  }
+		return a;
+	}
+
+	char *sameznach(char strx[9])
+	  {
+	   char str1n[9]="00000000\0";
+	   int i=0;
+		while(strx[i]!='\0')
+		  {
+			  i++;
+		  }
+		   int	k=i-1;
+		   for(int j=7;j>0;j--)
+			 {
+			   if(k>=0)
+				  {
+					str1n[j]=strx[k];
+				  }
+				k--;
+			 }
+		 return str1n;
+	  }
+
+	  char  perevodvchar(int rR)
+	{
+		char b;
+		switch(rR)
+		  {
+			  case 10: b='A';break;
+			  case 11: b='B';break;
+			  default : b=rR+'0';break;
+		  }
+		return b;
+	}
+
+	  char *sub(char str1x[9],char str2y[9])
+		{
+		   char result[9]="00000000\0";
+			 for(int i=7;i>0;i--)
+			   {
+				 int a=perevodvint(str1x[i]);
+				 int b=perevodvint(str2y[i]);
+				 int r=a-b;
+				   if(result[i]=='9')
+					 {
+					   r=r-1;
+					 }
+				   if(r<0)
+					 {
+					   r=r+12;
+					   result[i-1]='9';
+					 }
+				 result[i]=perevodvchar(r);
+			   }
+			return result;
+		}
+
+		int sravnenie(char *str1x,char *str2y)
+		  {
+			int i=0;
+			int j=0;
+			int result=2;
+			  while(str1x[i]!='\0')
+				{
+				  i++;
+				}
+			  while(str2y[j]!='\0')
+				{
+				  j++;
+				}
+			  if(i>j)
+				{
+					result=0;
+				}
+			  else
+				if(i<j)
+				  {
+					  result=1;
+				  }
+			  else
+				{
+				   for(int p=0;p<i;p++)
+					 {
+						 if(str1x[p]>str2y[p])
+						   {
+							   result=0;
+						   }
+						 if(str1x[p]<str2y[p])
+						   {
+							   result=1;
+						   }
+					 }
+				}
+			  return result;
+		  }
+//---------------------------------------------------------------------------

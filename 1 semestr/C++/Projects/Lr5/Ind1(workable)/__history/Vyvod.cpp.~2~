@@ -1,0 +1,6 @@
+#include <iostream.h>
+
+void c(int S,int j)
+	 {
+		cout<<"S["<<j<<"]""="<<S<<" ";
+	 }

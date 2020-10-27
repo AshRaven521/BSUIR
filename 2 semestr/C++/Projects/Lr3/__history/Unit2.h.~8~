@@ -1,0 +1,47 @@
+//---------------------------------------------------------------------------
+#include <string>
+#ifndef Unit2H
+#define Unit2H
+
+class Products
+{
+  public:
+	std::string name;
+	int quantity;
+	int WorkNumber;
+	Products *next;//указатель на следующий узел
+
+	Products()
+	{
+		name="";
+		quantity=0;
+		WorkNumber=0;
+	}
+};
+
+class List
+{
+   public:
+	Products *head;//указатель на корневой узел
+
+	//конструктор:
+	List()
+	{
+		head=new Products;
+		head->next=NULL;
+	}
+
+	//деструктор:
+	~List()
+	{
+		delete head;
+	}
+
+	void AddList(std::string str,int a,int b);//передаем аргументы для изменения полей
+
+	void DeleteUzel();
+};
+
+
+//---------------------------------------------------------------------------
+#endif

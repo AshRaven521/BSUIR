@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+  <Transactions>
+    <Transaction>2019.10.27 21:35:33.340,=C:\Users\ivank\Documents\RAD Studio\Projects\File3.cpp</Transaction>
+    <Transaction>2019.10.27 21:37:32.284,C:\ПТУИР\ОАиП\Лабораторные\Projects\Lr5\Ind1\File1.cpp=C:\Users\ivank\Documents\RAD Studio\Projects\File3.cpp</Transaction>
+    <Transaction>2019.10.27 21:37:41.684,C:\ПТУИР\ОАиП\Лабораторные\Projects\Lr5\Ind1\Project1.cbproj=C:\Users\ivank\Documents\RAD Studio\Projects\Project3.cbproj</Transaction>
+    <Transaction>2019.10.27 21:44:29.347,=C:\ПТУИР\ОАиП\Лабораторные\Projects\Lr5\Ind1\Debug\Win32\FunctionLib.lib</Transaction>
+  </Transactions>
+</BorlandProject>

@@ -1,0 +1,7 @@
+C:\PTUIR\3 semestr\ISP\Lr2\Lr2WindowsService\bin\Debug\Lr2WindowsService.exe.config
+C:\PTUIR\3 semestr\ISP\Lr2\Lr2WindowsService\bin\Debug\Lr2WindowsService.exe
+C:\PTUIR\3 semestr\ISP\Lr2\Lr2WindowsService\bin\Debug\Lr2WindowsService.pdb
+C:\PTUIR\3 semestr\ISP\Lr2\Lr2WindowsService\obj\Debug\Lr2WindowsService.exe
+C:\PTUIR\3 semestr\ISP\Lr2\Lr2WindowsService\obj\Debug\Lr2WindowsService.pdb
+C:\PTUIR\3 semestr\ISP\Lr2\Lr2WindowsService\obj\Debug\Lr2WindowsService.ProjectInstaller.resources
+C:\PTUIR\3 semestr\ISP\Lr2\Lr2WindowsService\obj\Debug\Lr2WindowsService.csproj.GenerateResource.cache

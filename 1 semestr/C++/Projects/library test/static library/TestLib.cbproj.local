@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.069,C:\Users\ivank\Documents\RAD Studio\Projects\TestLib.cbproj=C:\ПТУИР\ОАиП\Лабораторные\Projects\library test\static library\TestLib.cbproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.508,C:\Users\ivank\Documents\RAD Studio\Projects\Project2.cbproj=C:\Users\ivank\Documents\RAD Studio\Projects\TestLib.cbproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.266,C:\Users\ivank\Documents\RAD Studio\Projects\Utest.cpp=C:\ПТУИР\ОАиП\Лабораторные\Projects\library test\static library\Utest.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.716,=C:\Users\ivank\Documents\RAD Studio\Projects\File2.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.250,C:\Users\ivank\Documents\RAD Studio\Projects\File2.cpp=C:\Users\ivank\Documents\RAD Studio\Projects\Utest.cpp</Transaction>
+    <Transaction>2019.10.24 16:34:05.320,=C:\ПТУИР\ОАиП\Лабораторные\Projects\library test\static library\Debug\Win32\MyLib.lib</Transaction>
+  </Transactions>
+</BorlandProject>

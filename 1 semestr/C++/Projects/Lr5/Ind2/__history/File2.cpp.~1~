@@ -1,0 +1,52 @@
+//---------------------------------------------------------------------------
+
+#pragma hdrstop
+
+#include <tchar.h>
+#include <iostream.h>
+#include <conio.h>
+#include <windows.h>
+#include <math.h>
+//---------------------------------------------------------------------------
+
+#pragma argsused
+int i=1;
+bool h=true;
+bool calculate(int,int *);
+int _tmain(int argc, _TCHAR* argv[])
+{
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
+  const int N=6;
+
+	   int X[N]={2,-7,12,94,-71,9};
+		  if(N>0 && N<3)
+			calculate(N,X);
+		   else
+			 calculate(N,X);
+	  if(h)
+		 cout<<"Для всех элементов массива косинус больше нуля";
+	  else
+		 cout<<"Не для всех элементов массива косинус больше нуля";
+	getch();
+	return 0;
+}
+
+
+	  bool calculate( int f,int *X)
+{
+
+	double result;
+			   if (f == 0 )
+			 return false;
+	   cout << "Step\t" << i << endl;
+	   i++;
+	   result = cos((float)X[f]);
+		  if(result<=0)
+			h=false;
+	   cout << "Result= " << result << endl;
+	   calculate(f-1,X);
+
+	   return true;
+}
+//---------------------------------------------------------------------------

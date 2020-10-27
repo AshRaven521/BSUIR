@@ -1,0 +1,247 @@
+//---------------------------------------------------------------------------
+
+#pragma hdrstop
+
+#include <tchar.h>
+#include <iostream.h>
+#include <conio.h>
+#include <math.h>
+#include <windows.h>
+#include <string>
+#include <vector>
+#include <cstring>
+//---------------------------------------------------------------------------
+
+#pragma argsused
+
+struct book
+  {
+	 int RegistrationNumber;
+	 char author[32];
+	 char nazvanie[32];
+	 int year;
+	 char izdatelstvo[32];
+	 int pages;
+  };
+
+  //Обязательно заменить cin,cout на printf,scanf;
+
+/* 1 функция идет по заданию(т.е выделяет память под динамическую одномерную структуру)
+   2 функция отвечает за запись данных в структуру
+   3 функция выводит данные на экран*/
+book *CreateStruct(book *);
+book *AddStruct(book *,const int );
+void setData(book *,const int );
+void showData(const book *,const int );
+void search(book *,const int,int);
+void DeleteAndChange(book *,const int,int);
+void ShellSort(book *,const int,int);
+int _tmain(int argc, _TCHAR* argv[])
+{
+SetConsoleCP(1251);
+SetConsoleOutputCP(1251);
+  book *library=0;
+  int bookAmount=0;
+  int YesOrNot=1;//продолжить или остановить ввод;
+  int god;
+
+  library=CreateStruct(library);
+	do
+	  {
+		if(YesOrNot==1)
+		  {
+			library=AddStruct(library,bookAmount);
+			setData(library,bookAmount);
+
+			bookAmount++;
+		  }
+
+		  cout<<"Продолжить ввод данных (1-да, 0-нет) :";
+		  cin>>YesOrNot;
+		  cin.get();
+		  if(YesOrNot>1 || YesOrNot<0)
+			{
+			  printf("Неправильный выбор");
+			}
+	  }while(YesOrNot!=0);
+
+
+	  showData(library,bookAmount);
+	  cout<<"\n\nВведите год для поиска структуры :";
+	  cin>>god;
+	  search(library,bookAmount,god);
+	  DeleteAndChange(library,bookAmount,god);
+	  ShellSort(library,bookAmount,god);
+
+	  delete[] library;
+
+	  getch();
+	return 0;
+}
+
+  book *CreateStruct(book *Obj)
+	{
+		   Obj=new book[1];//выделение памяти для первой структуры
+
+		return Obj;
+	}
+
+  book *AddStruct(book *Obj,const int amount)
+	{
+		   book *tempObj=new book[amount+1];
+			 for(int i=0;i<amount;i++)
+			   {
+				  tempObj[i]=Obj[i];//копируем во временный объет
+			   }
+			 delete []Obj;
+			 Obj=tempObj;
+
+		return Obj;
+	}
+
+  void setData(book *Obj,const int amount)
+	{
+		cout<<"Регистрационный номер :";
+		cin>>Obj[amount].RegistrationNumber;
+		cin.get();
+
+		cout<<"Автор :";
+		cin.getline(Obj[amount].author,32);
+
+		cout<<"Название :";
+		cin.getline(Obj[amount].nazvanie,32);
+
+		cout<<"Год издания :";
+		cin>>Obj[amount].year;
+		cin.get();
+
+		cout<<"Издательство :";
+		cin.getline(Obj[amount].izdatelstvo,32);
+
+		cout<<"Количество страниц :";
+		cin>>Obj[amount].pages;
+		cin.get();
+	}
+
+  void showData(const book *Obj,const int amount)
+	{
+		system("cls");
+		printf("№         Рег.номер           Автор               Название            Год издания     Издательство    Кол-во страниц");
+		cout<<"\n=====================================================================================================================";
+		  for(int i=0;i<amount;i++)
+			{
+				//cout<<"\n"<<i+1<<"\t"<<Obj[i].RegistrationNumber<<"\t"<<Obj[i].author<<"\t"<<Obj[i].nazvanie<<"\t"<<Obj[i].year<<"\t"<<Obj[i].izdatelstvo<<"\t"<<Obj[i].pages<<endl;
+				printf("\n %d %10d %20s %20s          %10d %20s %10d",i+1,Obj[i].RegistrationNumber,Obj[i].author,Obj[i].nazvanie,Obj[i].year,Obj[i].izdatelstvo,Obj[i].pages);
+			}
+	}
+
+  void search(book *Obj,const int amount,int a)
+	{
+	  bool c=false;
+	   for(int i=0;i<amount;i++)
+		 {
+			 if(Obj[i].year==a)
+			   {
+				  printf("№         Рег.номер           Автор               Название            Год издания     Издательство    Кол-во страниц");
+				  cout<<endl;
+				  printf("\n %d %10d %20s %20s          %10d %20s %10d",i+1,Obj[i].RegistrationNumber,Obj[i].author,Obj[i].nazvanie,Obj[i].year,Obj[i].izdatelstvo,Obj[i].pages);
+				  c=true;
+			   }
+		 }
+	   if(c==false)
+		 {
+			 printf("Структура не найдена");
+		 }
+	}
+
+  void DeleteAndChange(book *Obj,const int amount,int god)
+	{
+		int vybor;
+		int rr,i=0;
+		cout<<"\n\nКак вы хотите взаимодействовать со структурой? :"<<endl<<"1-изменить"<<endl<<"0-удалить"<<endl;
+		cin>>vybor;
+		cout<<"Введите год для поиска структуры :";
+		cin>>rr;
+		  if(Obj[i].year==rr)
+			{
+				if(vybor==0)
+				  {
+					 Obj[i].RegistrationNumber=0;
+					 memset(Obj[i].author,' ',32);//заполняет пробелами поле "автор" на 32 символа(т.е полностью)
+					 memset(Obj[i].nazvanie,' ',32);
+					 Obj[i].year=0;
+					 memset(Obj[i].izdatelstvo,' ',32);
+					 Obj[i].pages=0;
+				  }
+				if(vybor==1)
+				  {
+					 cout<<"Регистрационный номер ("<<Obj[i].RegistrationNumber<<"):";
+					 cin>>Obj[amount].RegistrationNumber;
+					 cin.get();
+
+					 cout<<"Автор ("<<Obj[i].author<<"):";
+					 cin.getline(Obj[amount].author,32);
+
+					 cout<<"Название ("<<Obj[i].nazvanie<<"):";
+					 cin.getline(Obj[amount].nazvanie,32);
+
+					 cout<<"Год издания ("<<Obj[i].year<<"):";
+					 cin>>Obj[amount].year;
+					 cin.get();
+
+					 cout<<"Издательство ("<<Obj[i].izdatelstvo<<"):";
+					 cin.getline(Obj[amount].izdatelstvo,32);
+
+					 cout<<"Количество страниц ("<<Obj[i].pages<<"):";
+					 cin>>Obj[amount].pages;
+					 cin.get();
+				  }
+			}
+
+	}
+
+  void ShellSort(book *Obj, const int amount,int god)
+	{
+	  int i, j, step,n;
+	  int tmp;
+	  for (step = n / 2; step > 0; step /= 2)
+		{
+		  for (i = step; i < n; i++)
+			{
+			  tmp = Obj[i].year;
+				for (j = i; j >= step; j -= step)
+				  {
+					if (tmp < Obj[j - step].year)
+					  {
+						Obj[j].RegistrationNumber = Obj[j - step].RegistrationNumber;
+						strcpy(Obj[j].author,Obj[j-step].author);
+						//Obj[j].author = Obj[j - step].author;
+						strcpy(Obj[j].nazvanie,Obj[j-step].nazvanie);
+						//Obj[j].nazvanie = Obj[j - step].nazvanie;
+						Obj[j].year = Obj[j - step].year;
+						strcpy(Obj[j].izdatelstvo,Obj[j-step].izdatelstvo);
+						//Obj[j].izdatelstvo = Obj[j - step].izdatelstvo;
+						Obj[j].pages = Obj[j - step].pages;
+					  }
+					else
+					  break;
+				  }
+			  Obj[j].year = tmp;
+			}
+		}
+	cout<<"Введите год по которому будет происходить вывод :";
+	cin>>god;
+	 printf("№         Рег.номер           Автор               Название            Год издания     Издательство    Кол-во страниц");
+	  for(i=0;i<amount;i++)
+		{
+			if(Obj[i].year>god)
+			  {
+				 printf("\n %d %10d %20s %20s          %10d %20s %10d",i+1,Obj[i].RegistrationNumber,Obj[i].author,Obj[i].nazvanie,Obj[i].year,Obj[i].izdatelstvo,Obj[i].pages);
+			  }
+			else
+			  {
+				  printf("Нет книг,подходящих по заданному условию");
+			  }
+		}
+	}
+//---------------------------------------------------------------------------

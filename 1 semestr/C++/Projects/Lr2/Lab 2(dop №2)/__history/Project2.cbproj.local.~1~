@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+  <Transactions>
+    <Transaction>2019.09.23 15:46:29.769,=C:\Users\3-306-Dell\Documents\RAD Studio\Projects\File1.cpp</Transaction>
+    <Transaction>2019.09.23 15:57:40.023,D:\ПТУИР\ОАиП\Лабораторные\Projects\Lr2\Lab 2(dop №2)\File2.cpp=C:\Users\3-306-Dell\Documents\RAD Studio\Projects\File1.cpp</Transaction>
+    <Transaction>2019.09.23 15:57:44.202,D:\ПТУИР\ОАиП\Лабораторные\Projects\Lr2\Lab 2(dop №2)\Project2.cbproj=C:\Users\3-306-Dell\Documents\RAD Studio\Projects\Project1.cbproj</Transaction>
+  </Transactions>
+</BorlandProject>

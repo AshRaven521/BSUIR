@@ -1,0 +1,27 @@
+//---------------------------------------------------------------------------
+
+
+#pragma hdrstop
+
+#include "Unit4.h"
+
+
+class Polygon:public Figure
+  {
+	  double x1;
+	  double y1;
+	  double x2;
+	  double y2;
+
+	  Polygon(double x,double y,double a,double b,double c,double d)//конструктор
+		{
+		   x1=a;
+		   y1=b;
+		   x2=c;
+		   y2=d;
+		}
+  };
+
+//---------------------------------------------------------------------------
+
+#pragma package(smart_init)

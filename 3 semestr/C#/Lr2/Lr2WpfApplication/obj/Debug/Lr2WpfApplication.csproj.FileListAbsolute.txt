@@ -1,0 +1,14 @@
+C:\PTUIR\3 semestr\ISP\Lr2\Lr2WpfApplication\bin\Debug\Lr2WpfApplication.exe.config
+C:\PTUIR\3 semestr\ISP\Lr2\Lr2WpfApplication\bin\Debug\Lr2WpfApplication.exe
+C:\PTUIR\3 semestr\ISP\Lr2\Lr2WpfApplication\bin\Debug\Lr2WpfApplication.pdb
+C:\PTUIR\3 semestr\ISP\Lr2\Lr2WpfApplication\obj\Debug\Lr2WpfApplication.csprojAssemblyReference.cache
+C:\PTUIR\3 semestr\ISP\Lr2\Lr2WpfApplication\obj\Debug\MainWindow.g.cs
+C:\PTUIR\3 semestr\ISP\Lr2\Lr2WpfApplication\obj\Debug\App.g.cs
+C:\PTUIR\3 semestr\ISP\Lr2\Lr2WpfApplication\obj\Debug\Lr2WpfApplication_MarkupCompile.cache
+C:\PTUIR\3 semestr\ISP\Lr2\Lr2WpfApplication\obj\Debug\Lr2WpfApplication_MarkupCompile.lref
+C:\PTUIR\3 semestr\ISP\Lr2\Lr2WpfApplication\obj\Debug\MainWindow.baml
+C:\PTUIR\3 semestr\ISP\Lr2\Lr2WpfApplication\obj\Debug\Lr2WpfApplication.g.resources
+C:\PTUIR\3 semestr\ISP\Lr2\Lr2WpfApplication\obj\Debug\Lr2WpfApplication.Properties.Resources.resources
+C:\PTUIR\3 semestr\ISP\Lr2\Lr2WpfApplication\obj\Debug\Lr2WpfApplication.csproj.GenerateResource.cache
+C:\PTUIR\3 semestr\ISP\Lr2\Lr2WpfApplication\obj\Debug\Lr2WpfApplication.exe
+C:\PTUIR\3 semestr\ISP\Lr2\Lr2WpfApplication\obj\Debug\Lr2WpfApplication.pdb

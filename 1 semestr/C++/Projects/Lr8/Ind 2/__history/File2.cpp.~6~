@@ -1,0 +1,324 @@
+//---------------------------------------------------------------------------
+
+#pragma hdrstop
+
+#include <tchar.h>
+#include <iostream.h>
+#include <conio.h>
+#include <math.h>
+#include <windows.h>
+#include <string>
+#include <vector>
+#include <cstring>
+#include <fstream>
+//---------------------------------------------------------------------------
+
+#pragma argsused
+  struct product
+	{
+		char nazvanie[32];
+		int kolichestvo;
+		int WorkshopNumber;
+	};
+product *CreateStruct(product *);
+product *AddStruct(product *,const int );
+void setData(product *,const int);
+void showData(const product *,const int );
+void DeleteAndChange(product * &, int &,int);
+void Sortirovka(product *,const int);
+void ShellSort(product *,const int);
+void Save(product *, const int);
+void Load(product* &, int &);
+// Вывести меню пользователю и вернуть номер варианта
+int prompt_menu_item()
+{
+	// Выбранный вариант меню
+	int variant;
+	cout << "Выберите вариант\n" << endl;
+	cout << "1. Просмотреть содержимое\n"
+		 << "2. Добавить структуру\n"
+		 << "3. Изменить структуру\n"
+		 << "4. Удалить структуру\n"
+		 << "5. Упорядочить структуру\n"
+		 << "6. Выйти\n" << endl;
+	cout << ">>> ";
+	cin >> variant;
+	return variant;
+}
+int _tmain(int argc, _TCHAR* argv[])
+{
+SetConsoleCP(1251);
+SetConsoleOutputCP(1251);
+//доделать подгрузку из файла(не понятно чо это)
+product *Obj=0;
+  int variant;
+  int productAmount=0;
+
+	Load(Obj,productAmount);
+
+
+	do
+	 {
+  system("cls");
+   variant = prompt_menu_item();
+
+	switch (variant)
+	{
+		case 1:
+			showData(Obj,productAmount);
+			break;
+		case 2:
+		{
+			Obj=AddStruct(Obj,productAmount);
+			setData(Obj,productAmount);
+			productAmount++;
+			Save(Obj,productAmount);
+			break;
+		}
+		case 3:
+			DeleteAndChange(Obj,productAmount,1);
+			Save(Obj,productAmount);
+			break;
+		case 4:
+			DeleteAndChange(Obj,productAmount,0);
+			Save(Obj,productAmount);
+			break;
+		case 5:
+			Sortirovka(Obj,productAmount);
+			break;
+		case 6:
+			Save(Obj,productAmount);
+			cout << "Выход..."<<endl;
+			exit(EXIT_SUCCESS);
+			break;
+		default:
+		{
+			cout << "Вы выбрали неверный вариант" << endl;
+			break;
+		}
+	}
+	getch();
+	 }while(variant!=6);
+
+	  delete[] Obj;
+
+	return 0;
+}
+  product *CreateStruct(product *Obj)
+	{
+		   Obj=new product[1];//выделение памяти для первой структуры
+
+		return Obj;
+	}
+
+  product *AddStruct(product *Obj,const int amount)
+	{
+		   product *tempObj=new product[amount+1];
+			 for(int i=0;i<amount;i++)
+			   {
+				  tempObj[i]=Obj[i];//копируем во временный объет
+			   }
+			 delete []Obj;
+			 Obj=tempObj;
+
+		return Obj;
+	}
+
+  void setData(product *Obj,const int amount)
+	{
+		cin.get();
+		cout<<"Наименование товара :";
+		cin.getline(Obj[amount].nazvanie,32);
+
+		cout<<"Количество товара :";
+		cin>>Obj[amount].kolichestvo;
+		cin.get();
+
+		cout<<"Номер цеха :";
+		cin>>Obj[amount].WorkshopNumber;
+		cin.get();
+	}
+
+  void showData(const product *Obj,const int amount)
+	{
+		system("cls");
+		printf("№         Название товара    Кол-во    Номер цеха");
+		cout<<"\n======================================================";
+		  for(int i=0;i<amount;i++)
+			{
+				printf("\n %d %20s %10d %10d",i+1,Obj[i].nazvanie,Obj[i].kolichestvo,Obj[i].WorkshopNumber);
+			}
+	}
+
+  void DeleteAndChange(product* &Obj,int &amount,int vybor)
+	{
+		int rr,i=0;
+		cout<<"Введите номер цеха :";
+		cin>>rr;
+		for(i=0;i<amount;i++)
+		 {
+		  if(Obj[i].WorkshopNumber==rr)
+			{
+				if(vybor==0)
+				  {
+					 /*memset(Obj[i].nazvanie,' ',32);//заполняет пробелами поле "название" на 32 символа(т.е полностью)
+					 Obj[i].kolichestvo=0;
+					 Obj[i].WorkshopNumber=0;*/
+
+					 product* tmp = new product[amount - 1];
+					   for (int j = 0; j <i ; j++)
+						 {
+						   tmp[j] = Obj[j];
+						 }
+					   for (int j = i; j < amount - 1; j++)
+						 {
+						   tmp[j] = Obj[j + 1];
+						 }
+					 delete[]Obj;
+					 Obj = tmp;
+					 amount--;
+
+				  }
+				if(vybor==1)
+				  {
+					 cin.get();
+					 cout<<"Название товара ("<<Obj[i].nazvanie<<"):";
+					 cin.getline(Obj[i].nazvanie,32);
+
+					 cout<<"Количество товара ("<<Obj[i].kolichestvo<<"):";
+					 cin>>Obj[i].kolichestvo;
+					 cin.get();
+
+					 cout<<"Номер цеха ("<<Obj[i].WorkshopNumber<<"):";
+					 cin>>Obj[i].WorkshopNumber;
+					 cin.get();
+				  }
+			}
+
+		 }
+	}
+
+  void Sortirovka(product *Obj,const int amount)
+	{
+	//создадим еще один массив структур,чтобы при нахождении заданного номера цеха записать эти номера в новый массив,а затем там их сравнить
+	  int i=0,ff,productAmount2=0;
+	  cout<<"Введите номер цеха :";
+	  cin>>ff;
+	  product *Obj2;
+	   Obj2=CreateStruct(Obj2);
+		for(i=0;i<amount;i++)
+		  {
+			 if(Obj[i].WorkshopNumber==ff)
+			   {
+				   Obj2=AddStruct(Obj2,productAmount2);
+				   strcpy(Obj2[productAmount2].nazvanie,Obj[i].nazvanie);
+				   Obj2[productAmount2].kolichestvo=Obj[i].kolichestvo;
+				   Obj2[productAmount2].WorkshopNumber=Obj[i].WorkshopNumber;
+				   productAmount2++;
+			   }
+
+		  }
+
+	  ShellSort(Obj2,productAmount2);
+	}
+
+  void ShellSort(product *Obj2, const int productAmount2)
+	{
+	  int i, j, step,n=productAmount2;
+	  int tmp,tmpWorkshop;
+	  char tmpNazvanie[32];
+	  for (step = n / 2; step > 0; step /= 2)
+		{
+		  for (i = step; i < n; i++)
+			{
+			  tmp = Obj2[i].kolichestvo;
+			  tmpWorkshop=Obj2[i].WorkshopNumber;
+			  strcpy(tmpNazvanie,Obj2[i].nazvanie);
+				for (j = i; j >= step; j -= step)
+				  {
+					if (tmp > Obj2[j - step].kolichestvo)//при смене знака изменится сортировка по возрастанию на убывание
+					  {
+						strcpy(Obj2[j].nazvanie,Obj2[j-step].nazvanie);
+						Obj2[j].kolichestvo = Obj2[j - step].kolichestvo;
+						Obj2[j].WorkshopNumber = Obj2[j - step].WorkshopNumber;
+					  }
+					else
+					  break;
+				  }
+			  Obj2[j].kolichestvo = tmp;
+			  Obj2[j].WorkshopNumber=tmpWorkshop;
+			  strcpy(Obj2[j].nazvanie,tmpNazvanie);
+			}
+		}
+	 printf("№         Название товара       Кол-во    Номер цеха");
+	 cout<<endl;
+	  for(i=0;i<productAmount2;i++)
+		{
+
+		   printf("\n %d %20s %10d %10d",i+1,Obj2[i].nazvanie,Obj2[i].kolichestvo,Obj2[i].WorkshopNumber);
+
+		}
+	}
+
+  void Save(product *Obj, const int amount)
+	{
+	  ofstream fout;
+	  fout.open("EndlessData.txt", ios_base::trunc);//ios::trunc-флаг,который удаляет содержимое файла,если он существует
+		if(!fout.is_open())
+		  {
+			cout<<"Ошибка при сохранении  файла";
+		  }
+		else
+		  {
+			  cout<<"Файл успешно сохранен";
+
+			for (int i = 1; i < amount; i++)
+			  {
+				fout<<i<<"\t"<<Obj[i].nazvanie<<"\t"<<Obj[i].kolichestvo<<"\t"<<Obj[i].WorkshopNumber<<endl;
+				//fout.write((char*)&Obj[i], sizeof(product));
+			  }
+		  }
+	  fout.close();
+	}
+
+  void Load(product* &Obj, int &amount)//если не передавать & ,то при возврате obj в main оно будет пустое
+	{
+
+	   ifstream fin;
+	   fin.open("BeginingData.txt");
+
+		 if(!fin.is_open())
+		   {
+			 cout<<"Ошибка открытия файла";
+		   }
+		 else
+		   {
+			 cout<<"Файл успешно открыт";
+			 char ch[80];
+			 char *fm;
+			 int i=0;
+			   while(fin.getline(ch,80))
+				 {
+				   Obj=AddStruct(Obj,amount);
+					 fm = strtok(ch,"\t");
+					 i=0;
+					   while (fm != NULL)                         // пока есть лексемы
+						 {
+						   fm = strtok (NULL, "\t");
+						   if(i==0)
+						   strcpy(Obj[amount].nazvanie,fm);
+						   if(i==1)
+							Obj[amount].kolichestvo=atoi(fm);
+						   if(i==2)
+							Obj[amount].WorkshopNumber=atoi(fm);
+						   i++;//счетчик для различия какой раз мы находимся в цикле
+						 }
+					amount++;//показывает сколько структур
+				 }
+
+		   }
+	   fin.close();
+	}
+//---------------------------------------------------------------------------
+
+//---------------------------------------------------------------------------

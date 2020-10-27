@@ -1,0 +1,29 @@
+//---------------------------------------------------------------------------
+
+#ifndef Unit2H
+#define Unit2H
+
+#include <string>
+#include <System.hpp>
+
+
+class Hospital
+{
+  public:
+	AnsiString name;
+	int pol;
+	AnsiString age;
+	AnsiString diagnoz;
+	int number;
+
+	Hospital()
+	{
+	   name="";
+	   pol=0;
+	   age="";
+	   diagnoz="";
+	   number=0;
+	}
+};
+//---------------------------------------------------------------------------
+#endif

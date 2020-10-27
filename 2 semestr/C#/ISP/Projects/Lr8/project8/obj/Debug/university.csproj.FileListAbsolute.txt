@@ -1,0 +1,6 @@
+C:\PTUIR\2 semestr\ISP\Projects\Lr8\project8\bin\Debug\project8.exe.config
+C:\PTUIR\2 semestr\ISP\Projects\Lr8\project8\bin\Debug\project8.exe
+C:\PTUIR\2 semestr\ISP\Projects\Lr8\project8\bin\Debug\project8.pdb
+C:\PTUIR\2 semestr\ISP\Projects\Lr8\project8\obj\Debug\university.csprojAssemblyReference.cache
+C:\PTUIR\2 semestr\ISP\Projects\Lr8\project8\obj\Debug\project8.exe
+C:\PTUIR\2 semestr\ISP\Projects\Lr8\project8\obj\Debug\project8.pdb

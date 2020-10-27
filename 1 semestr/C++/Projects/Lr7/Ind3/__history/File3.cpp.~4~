@@ -1,0 +1,152 @@
+//---------------------------------------------------------------------------
+
+#pragma hdrstop
+
+#include <tchar.h>
+#include <iostream.h>
+#include <conio.h>
+#include <math.h>
+#include <windows.h>
+//---------------------------------------------------------------------------
+
+#pragma argsused
+char* perevodvobr(char *);
+char *slozhenie(char *,char *);
+int _tmain(int argc, _TCHAR* argv[])
+{
+  char a[9];
+  char b[9];
+  char *vyzov1;
+  char *vyzov2;
+  char *vyzov3;
+  char sd[9];
+  char sf[9];
+SetConsoleCP(1251);
+SetConsoleOutputCP(1251);
+  cout<<"¬ведите первое двоичное число,заданное в естественной форме : ";
+  cin>>a;
+  cout<<"¬ведите второе двоичное число,заданное в естественной форме : ";
+  cin>>b;
+	vyzov1=perevodvobr(a);
+	for(int i=0;i<9;i++)
+		sd[i]=vyzov1[i];
+	vyzov2=perevodvobr(b);
+    for(int i=0;i<9;i++)
+		sf[i]=vyzov2[i];
+	vyzov3=slozhenie(sd,sf);
+	for(int i=0;i<9;i++)
+		sd[i]=vyzov3[i];
+	cout<<"\n–езультат сложени€ в обратном коде :"<<sd<<endl;
+	if(sd[0]=='1')
+	{
+		vyzov3=slozhenie(sd,"00000001\0");
+		for(int i=0;i<9;i++)
+			sd[i]=vyzov3[i];
+	}
+	cout<<"\n–езультат сложени€ в дополнительном коде :"<<sd<<endl;
+	getch();
+	return 0;
+}
+  char* perevodvobr(char *aA)
+	{
+		char c[9]="00000000\0";
+		int i=0;
+		int j=1;
+		int k=0;
+		char df[9]="00000000\0";
+		while(aA[i]!='\0' && i<8)
+		{
+			if(aA[i]!='-')
+			{
+			   k++;
+			}
+		  i++;
+		}
+		k=k-1;
+		for(j=7;j>=0;j--)
+		{
+			if(k>=0)
+			{
+				df[j]=aA[k];
+				if(aA[k]=='-')
+					df[0]='-';
+				else
+					df[0]='+';
+				k--;
+			}
+		}
+		i=0;
+		j=1;
+		  while(df[i]!='\0')
+			{
+			   if(df[0]=='-')
+				 {
+					c[0]='1';
+					if(i>0)
+					{
+						if(df[i]=='0')
+							c[j]='1';
+						else
+							c[j]='0';
+						j++;
+					}
+				 }
+			   else
+				 {
+					if(i>0)
+					{
+						c[j]=df[i];
+						j++;
+					}
+				 }
+				i++;
+			}
+		return c;
+	}
+
+	char *slozhenie(char *x,char *y)
+	  {
+		char result[9]="00000000\0";
+		  for(int i=7;i>=0;i--)
+			{
+				if((x[i]=='1' && y[i]=='0') || (x[i]=='0' && y[i]=='1'))
+				  {
+					if(result[i]=='1')
+					  {
+						  result[i]='0';
+						  if(i>0)
+							result[i-1]='1';
+					  }
+					  else
+					  {
+						result[i]='1';
+					  }
+				  }
+
+
+				if(x[i]=='0' && y[i]=='0')
+				  {
+					if(result[i]!='1')
+					  result[i]='0';
+				  }
+				if(x[i]=='1' && y[i]=='1')
+				  {
+					if(result[i]!='1')
+					  {
+					  result[i]='0';
+					  if(i>0)
+						result[i-1]='1';
+					  }
+					else
+					  {
+						result[i]='1';
+						if(i>0)
+							result[i-1]='1';
+					  }
+				  }
+			}
+		  //if(result[2]=='1')
+		  //	result[0]='1';
+		  return result;
+	  }
+//---------------------------------------------------------------------------

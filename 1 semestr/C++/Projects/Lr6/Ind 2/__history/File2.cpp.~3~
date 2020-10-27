@@ -1,0 +1,68 @@
+//---------------------------------------------------------------------------
+
+#pragma hdrstop
+
+#include <tchar.h>
+#include <iostream.h>
+#include <windows.h>
+#include <conio.h>
+#include <cstring>
+//---------------------------------------------------------------------------
+
+#pragma argsused
+  char* symboldelete(char*,int,int);
+int _tmain(int argc, _TCHAR* argv[])
+{
+  SetConsoleCP(1251);
+  SetConsoleOutputCP(1251);
+   int a;
+   int b;
+   int strlength,length;
+   char text[]= "1. Напечатать квитанцию об оплате за телеграмму, если известна стоимость одного слова. 2. В тексте слова заданной длины заменить указанной подстрокой, длина которой может не совпадать с длиной слова. 3. В тексте каждую букву заменить ее номером в алфавите. 4. В тексте после указанного символа вставить подстроку. 5. После каждого слова текста, оканчивающегося заданной подстрокой, вставить указанный символ.";
+		 cout<<"Заданный текст: "<<text;
+		   cout<<"\nВведите длину слова: ";
+		   cin>>a;
+	char* str=text;
+	char* str2;
+	char* result;
+	result=new char[1];
+	bool bE=FALSE;
+	b=strlen(str);
+		while(!bE)
+		  {
+			   str2=strchr(str,' ');
+			   if(str2!=NULL)
+			   {
+				 strlength=str2-str;
+				 if(strlength==a)
+				  {
+						int x=0;
+				  }
+					else
+					 strncat(result,str,strlength);
+					//функция для  удаления символов :
+				 str=symboldelete(str2,1,length);
+			   }
+			   else
+				bE=TRUE;
+		  }
+	  cout<<"Результат задания: "<<result;
+	getch();
+	return 0;
+}
+
+  char* symboldelete(char *str, int n, int length)
+{
+  char *s;
+
+  s = new char[strlen(str)-n];
+  int j = 0;
+  for (int i =n; i<strlen(str); i++)
+  {
+	s[j] = str[i];
+	j++;
+  }
+  s[j] = '\0';
+  return(s);
+}
+//---------------------------------------------------------------------------

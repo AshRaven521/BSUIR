@@ -1,0 +1,2 @@
+int sum(int **array,int,int);
+   void c(int,int);

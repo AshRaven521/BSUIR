@@ -1,0 +1,6 @@
+﻿  1.2(8).cpp
+C:\PTUIR\2 semestr\Programming\Projects\Lr1\1.2(8)\1.2(8)\1.2(8).cpp(16,13): warning C4473: "scanf_s": передано недостаточно аргументов для строки формата
+C:\PTUIR\2 semestr\Programming\Projects\Lr1\1.2(8)\1.2(8)\1.2(8).cpp(16,13): message : заполнители и их параметры ожидают переменное число аргументов в количестве 2, но было предоставлено 1
+C:\PTUIR\2 semestr\Programming\Projects\Lr1\1.2(8)\1.2(8)\1.2(8).cpp(16,13): message : отсутствующий вариативный аргумент "2" требуется для строки форматирования "%c"
+C:\PTUIR\2 semestr\Programming\Projects\Lr1\1.2(8)\1.2(8)\1.2(8).cpp(16,13): message : этот аргумент используется в качестве размера буфера
+  1.2(8).vcxproj -> C:\PTUIR\2 semestr\Programming\Projects\Lr1\1.2(8)\Debug\1.2(8).exe

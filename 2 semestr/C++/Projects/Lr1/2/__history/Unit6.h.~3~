@@ -1,0 +1,16 @@
+//---------------------------------------------------------------------------
+
+#ifndef Unit6H
+#define Unit6H
+
+#include "Unit5.h"
+
+class kvadrat : public MyRectangle
+  {
+	  double calc_square();
+	  double calc_perimetr();
+	  void mass_centre(int &x0,int &y0);
+  };
+
+//---------------------------------------------------------------------------
+#endif

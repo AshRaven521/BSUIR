@@ -1,0 +1,58 @@
+//---------------------------------------------------------------------------
+
+#pragma hdrstop
+
+#include <tchar.h>
+#include <iostream.h>
+#include <fstream>
+#include <conio.h>
+#include <windows.h>
+//---------------------------------------------------------------------------
+
+#pragma argsused
+   struct student
+	 {
+		 char surname[32];
+		 int groupnumber;
+		 int mark;
+	 };
+void groups(student);
+int _tmain(int argc, _TCHAR* argv[])
+{
+
+	student array[5];
+	  for(int i=0;i<5;i++)
+		{
+			cout<<"¬ведите фамилию студента :";
+			cin>>student.surname;
+			cout<<"¬ведите номер группы :";
+			cin>>student.groupnumber;
+			cout<<"¬ведите оценку за семестр :";
+			cin>>student.mark;
+		}
+
+	return 0;
+}
+
+  void groups(student array[5])
+	{
+
+		int a=0;
+		cout<<"¬ведите номер группы искомых студентов :";
+		cin>>a;
+		  ofstream fout;
+		  fout.open("students.txt",ios_base::trunc);
+		  for(int i=0;i<5;i++)
+			{
+				if(student.groupnumber==a)
+				  {
+					 cout<<"‘амили€ студента выбранной группы :"<<student.surname;
+					 fout<<"‘амили€ студента выбранной группы :"<<student.surname;
+					 cout<<"√руппа  :"<<student.groupnumber;
+					 fout<<"√руппа  :"<<student.groupnumber;
+					 cout<<"ќценка за семестр :"<<student.mark;
+                     fout<<"ќценка за семестр :"<<student.mark;
+				  }
+			}
+	}
+//---------------------------------------------------------------------------

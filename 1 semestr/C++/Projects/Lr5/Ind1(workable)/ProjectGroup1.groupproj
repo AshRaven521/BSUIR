@@ -1,0 +1,48 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{08525EC8-44F5-4A60-909F-4E2FE9303A63}</ProjectGuid>
+		</PropertyGroup>
+		<ItemGroup>
+			<Projects Include="Project1.cbproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="FunctionLib.cbproj">
+				<Dependencies/>
+			</Projects>
+		</ItemGroup>
+		<ProjectExtensions>
+			<Borland.Personality>Default.Personality.12</Borland.Personality>
+			<Borland.ProjectType/>
+			<BorlandProject>
+				<Default.Personality/>
+			</BorlandProject>
+		</ProjectExtensions>
+		<Target Name="Project1">
+			<MSBuild Projects="Project1.cbproj"/>
+		</Target>
+		<Target Name="Project1:Clean">
+			<MSBuild Projects="Project1.cbproj" Targets="Clean"/>
+		</Target>
+		<Target Name="Project1:Make">
+			<MSBuild Projects="Project1.cbproj" Targets="Make"/>
+		</Target>
+		<Target Name="FunctionLib">
+			<MSBuild Projects="FunctionLib.cbproj"/>
+		</Target>
+		<Target Name="FunctionLib:Clean">
+			<MSBuild Projects="FunctionLib.cbproj" Targets="Clean"/>
+		</Target>
+		<Target Name="FunctionLib:Make">
+			<MSBuild Projects="FunctionLib.cbproj" Targets="Make"/>
+		</Target>
+		<Target Name="Build">
+			<CallTarget Targets="Project1;FunctionLib"/>
+		</Target>
+		<Target Name="Clean">
+			<CallTarget Targets="Project1:Clean;FunctionLib:Clean"/>
+		</Target>
+		<Target Name="Make">
+			<CallTarget Targets="Project1:Make;FunctionLib:Make"/>
+		</Target>
+		<Import Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')" Project="$(BDS)\Bin\CodeGear.Group.Targets"/>
+	</Project>

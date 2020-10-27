@@ -1,0 +1,29 @@
+//---------------------------------------------------------------------------
+
+#ifndef Unit2H
+#define Unit2H
+
+
+
+class Hospital
+{
+  public:
+	String name;
+	int pol;
+	int age;
+	String diagnoz;
+	int number;
+
+	Hospital()
+	{
+	   name=" ";
+	   pol=0;
+	   age=0;
+	   diagnoz=" ";
+	   number=0;
+	}
+
+
+};
+//---------------------------------------------------------------------------
+#endif

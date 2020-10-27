@@ -1,0 +1,25 @@
+//---------------------------------------------------------------------------
+#include <vcl.h>
+#ifndef Unit2H
+#define Unit2H
+//---------------------------------------------------------------------------
+
+class RectangleMy
+  {
+	  private:
+		  int xRect1;
+		  int yRect1;
+		  int xRect2;
+		  int yRect2;
+
+	  public:
+		void show(TCanvas *Canvas);
+		void move(TCanvas *Canvas);
+		void hide (TCanvas *Canvas);
+
+		RectangleMy(int a,int b,int c,int d);
+
+  };
+
+
+#endif

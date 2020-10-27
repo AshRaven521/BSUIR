@@ -1,0 +1,27 @@
+//---------------------------------------------------------------------------
+
+
+#pragma hdrstop
+
+#include "Unit4.h"
+
+
+class Rectangle:public Figure
+  {
+	  int x1;
+	  int y1;
+	  int x2;
+	  int y2;
+
+	  Rectangle(int x,int y,int a,int b,int c,int d):Figure(x,y)//конструктор
+		{
+		   x1=a;
+		   y1=b;
+		   x2=c;
+		   y2=d;
+        }
+  };
+
+//---------------------------------------------------------------------------
+
+#pragma package(smart_init)

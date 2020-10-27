@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+  <Transactions>
+    <Transaction>2019.10.30 19:06:57.771,=C:\Users\ivank\Documents\RAD Studio\Projects\File1.cpp</Transaction>
+    <Transaction>2019.10.30 22:23:02.545,C:\Users\ivank\Documents\RAD Studio\Projects\First Integral.cbproj=C:\Users\ivank\Documents\RAD Studio\Projects\Project1.cbproj</Transaction>
+    <Transaction>2019.10.30 22:23:41.412,C:\Users\ivank\Documents\RAD Studio\Projects\1 Integral.cbproj=C:\Users\ivank\Documents\RAD Studio\Projects\First Integral.cbproj</Transaction>
+    <Transaction>2019.10.30 22:23:56.776,C:\Users\ivank\Documents\RAD Studio\Projects\1 Integral.cpp=C:\Users\ivank\Documents\RAD Studio\Projects\File1.cpp</Transaction>
+    <Transaction>2019.10.31 00:25:15.733,C:\PTUIR\OAiP\Laboratories\Projects\Lr5\Ind3\Integral.cpp=C:\Users\ivank\Documents\RAD Studio\Projects\1 Integral.cpp</Transaction>
+    <Transaction>2019.10.31 00:25:20.445,C:\PTUIR\OAiP\Laboratories\Projects\Lr5\Ind3\Integral.cbproj=C:\Users\ivank\Documents\RAD Studio\Projects\1 Integral.cbproj</Transaction>
+  </Transactions>
+</BorlandProject>

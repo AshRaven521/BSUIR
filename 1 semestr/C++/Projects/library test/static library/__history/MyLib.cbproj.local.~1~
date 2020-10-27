@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+  <Transactions>
+    <Transaction>2019.10.23 13:53:05.684,=C:\Users\ivank\Documents\RAD Studio\Projects\File1.h</Transaction>
+    <Transaction>2019.10.23 13:53:20.130,C:\Users\ivank\Documents\RAD Studio\Projects\Square.h=C:\Users\ivank\Documents\RAD Studio\Projects\File1.h</Transaction>
+    <Transaction>2019.10.23 13:53:31.070,=C:\Users\ivank\Documents\RAD Studio\Projects\File1.cpp</Transaction>
+    <Transaction>2019.10.23 13:53:40.033,C:\Users\ivank\Documents\RAD Studio\Projects\S1.cpp=C:\Users\ivank\Documents\RAD Studio\Projects\File1.cpp</Transaction>
+    <Transaction>2019.10.23 13:53:53.614,=C:\Users\ivank\Documents\RAD Studio\Projects\File1.cpp</Transaction>
+    <Transaction>2019.10.23 13:54:05.937,C:\Users\ivank\Documents\RAD Studio\Projects\S2.cpp=C:\Users\ivank\Documents\RAD Studio\Projects\File1.cpp</Transaction>
+    <Transaction>2019.10.23 13:54:26.097,C:\Users\ivank\Documents\RAD Studio\Projects\MyLib.cbproj=C:\Users\ivank\Documents\RAD Studio\Projects\Project1.cbproj</Transaction>
+    <Transaction>2019.10.23 13:54:42.058,=C:\Users\ivank\Documents\RAD Studio\Projects\File1.cpp</Transaction>
+    <Transaction>2019.10.23 13:54:52.256,C:\Users\ivank\Documents\RAD Studio\Projects\S3.cpp=C:\Users\ivank\Documents\RAD Studio\Projects\File1.cpp</Transaction>
+    <Transaction>2019.10.23 13:55:01.425,=C:\Users\ivank\Documents\RAD Studio\Projects\File1.cpp</Transaction>
+    <Transaction>2019.10.23 13:55:11.247,C:\Users\ivank\Documents\RAD Studio\Projects\S4.cpp=C:\Users\ivank\Documents\RAD Studio\Projects\File1.cpp</Transaction>
+    <Transaction>2019.10.23 13:55:26.686,=C:\Users\ivank\Documents\RAD Studio\Projects\File1.cpp</Transaction>
+    <Transaction>2019.10.23 13:55:36.551,C:\Users\ivank\Documents\RAD Studio\Projects\S5.cpp=C:\Users\ivank\Documents\RAD Studio\Projects\File1.cpp</Transaction>
+    <Transaction>2019.10.23 14:34:04.557,C:\ПТУИР\ОАиП\Лабораторные\Projects\library test\Square.h=C:\Users\ivank\Documents\RAD Studio\Projects\Square.h</Transaction>
+    <Transaction>2019.10.23 14:34:09.190,C:\ПТУИР\ОАиП\Лабораторные\Projects\library test\S5.cpp=C:\Users\ivank\Documents\RAD Studio\Projects\S5.cpp</Transaction>
+    <Transaction>2019.10.23 14:34:12.006,C:\ПТУИР\ОАиП\Лабораторные\Projects\library test\S1.cpp=C:\Users\ivank\Documents\RAD Studio\Projects\S1.cpp</Transaction>
+    <Transaction>2019.10.23 14:34:13.749,C:\ПТУИР\ОАиП\Лабораторные\Projects\library test\S4.cpp=C:\Users\ivank\Documents\RAD Studio\Projects\S4.cpp</Transaction>
+    <Transaction>2019.10.23 14:34:15.311,C:\ПТУИР\ОАиП\Лабораторные\Projects\library test\S3.cpp=C:\Users\ivank\Documents\RAD Studio\Projects\S3.cpp</Transaction>
+    <Transaction>2019.10.23 14:34:16.546,C:\ПТУИР\ОАиП\Лабораторные\Projects\library test\S2.cpp=C:\Users\ivank\Documents\RAD Studio\Projects\S2.cpp</Transaction>
+    <Transaction>2019.10.23 14:34:19.590,C:\ПТУИР\ОАиП\Лабораторные\Projects\library test\MyLib.cbproj=C:\Users\ivank\Documents\RAD Studio\Projects\MyLib.cbproj</Transaction>
+  </Transactions>
+  <ProjectSortOrder AutoSort="0" SortType="0">
+    <File Path="Square.h"/>
+    <File Path="S1.cpp"/>
+    <File Path="S2.cpp"/>
+    <File Path="S3.cpp"/>
+    <File Path="S4.cpp"/>
+    <File Path="S5.cpp"/>
+  </ProjectSortOrder>
+</BorlandProject>

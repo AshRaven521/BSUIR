@@ -1,0 +1,71 @@
+//---------------------------------------------------------------------------
+
+
+#pragma hdrstop
+
+#include "Unit2.h"
+void List::AddList(std::string str,int a,int b)
+{
+	if(head == NULL)
+		head = new Products();
+	else
+	{
+		Products *temp = head;
+		while(temp->next != NULL)
+		{
+			temp = temp->next;
+		}
+		temp->next = new Products();
+	}
+	size++;
+	current++;
+}
+
+void List::DeleteUzel(int index)
+{
+	if(index == 0)
+	{
+		Products *temp = head;
+		head = head->next;
+		delete temp;
+	}
+	else
+	{
+		Products *prev = head;
+		for(int i = 0; i < index - 1; i++)
+			prev = prev->next;
+		Products *temp = prev->next;
+		prev->next = temp->next;
+		delete temp;
+	}
+	size--;
+	current=0;
+}
+
+void List::Show() //Функция отображения списка на экране
+{
+	Products *temp = head;//Определяем указатель, который изначально он равен адресу начала списка
+
+	while (temp != NULL)//До тех пор пока не встретит пустое значение
+	{
+		temp = temp->next;//Указываем, что далее нам нужен следующий элемент
+	}
+}
+
+Products* List::Pop(const int N)//В качестве параметра принимается номер извлекаемого элемента
+{
+	Products *temp = head; //Обращаемся к началу списка
+	if ((head != NULL) && (N < size))//Делаем проверку на то что список не пуст и N не превышает число его элементов
+	{
+		for (int i=0; i<N; i++)
+		{
+			temp = temp->next;//Меняем адрес N раз
+		}
+		return temp;//возвращает элемент с номером,который мы передаем
+	}
+	return head;
+}
+
+//---------------------------------------------------------------------------
+
+#pragma package(smart_init)

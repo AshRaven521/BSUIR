@@ -1,0 +1,143 @@
+//---------------------------------------------------------------------------
+
+#pragma hdrstop
+
+#include <tchar.h>
+#include <iostream.h>
+#include <conio.h>
+#include <windows.h>
+#include <math.h>
+//---------------------------------------------------------------------------
+
+#pragma argsused
+char *sum(char*,char*);
+char *sub(char*,char*);
+int perevodvint(char);
+char *sameznach(char*);
+char perevodvchar(int);
+int _tmain(int argc, _TCHAR* argv[])
+{
+//сделать проверку в сложении на ввод числа с -;
+//проверить как делаетс€ вычитание;
+SetConsoleCP(1251);
+SetConsoleOutputCP(1251);
+char str1[9];
+char str2[9];
+char *dec;
+char *bec;
+char x1[9],x2[9];
+char* sumR;
+char* subR;
+
+cout<<"¬ведите первое число в двенадцатеричной системе счислени€ :";
+cin>>str1;
+cout<<"¬ведите второе число в двенадцатеричной системе счислени€ :";
+cin>>str2;
+  dec=sameznach(str1);
+  for(int f=0;f<9;f++)
+	x1[f]=dec[f];
+  bec=sameznach(str2);
+  for(int f=0;f<9;f++)
+	x2[f]=bec[f];
+
+	sumR=sum(x1,x2);
+	int k=0;
+	for(int f=0;f<9;f++)
+	{
+		if(sumR[f]!='0')
+		{
+			x1[k]=sumR[f];
+			k++;
+		}
+	}
+cout<<"–езультат :"<<x1;
+	getch();
+	return 0;
+}
+  char *sum(char str1x[9],char str2y[9])
+	{
+		char result[9]="00000000\0";
+		for(int i=7;i>0;i--)
+		  {
+			  int a=perevodvint(str1x[i]);
+			  int b=perevodvint(str2y[i]);
+			  int r=a+b;
+				if(result[i]=='1')
+				  {
+					  r=r+1;
+				  }
+				if(r>=12)
+				  {
+					r=r-12;
+					result[i-1]='1';
+				  }
+			  result[i]=perevodvchar(r);
+		  }
+	  return result;
+	}
+  int perevodvint(char x)
+	{
+		int a=0;
+		switch(x)
+		  {
+			  case 'A': a=10;break;
+			  case 'B': a=11;break;
+			  default : a=x-'0';break;
+		  }
+		return a;
+	}
+
+	char *sameznach(char strx[9])
+	  {
+	   char str1n[9]="00000000\0";
+	   int i=0;
+		while(strx[i]!='\0')
+		  {
+			  i++;
+		  }
+		   int	k=i-1;
+		   for(int j=7;j>0;j--)
+			 {
+			   if(k>=0)
+				  {
+					str1n[j]=strx[k];
+				  }
+				k--;
+			 }
+		 return str1n;
+	  }
+
+	  char  perevodvchar(int rR)
+	{
+		char b;
+		switch(rR)
+		  {
+			  case 10: b='A';break;
+			  case 11: b='B';break;
+			  default : b=rR+'0';break;
+		  }
+		return b;
+	}
+
+	  char *sub(char str1x[9],char str2y[9])
+		{
+		   char result[9]="00000000\0";
+			 for(int i=7;i>0;i--)
+			   {
+				 int a=perevodvint(str1x[i]);
+				 int b=perevodvint(str2y[i]);
+				 int r=a-b;
+				   if(result[i]=='9')
+					 {
+					   r=r-1;
+					 }
+				   if(r<0)
+					 {
+					   r=r+12;
+					   result[i-1]='9';
+					 }
+				 result[i]=perevodvchar(r);
+			   }
+			return result;
+		}
+//---------------------------------------------------------------------------

@@ -1,0 +1,24 @@
+//---------------------------------------------------------------------------
+
+#pragma hdrstop
+
+#include <tchar.h>
+//---------------------------------------------------------------------------
+
+#pragma argsused
+void Save(float,float,float);
+int _tmain(int argc, _TCHAR* argv[])
+{
+	  float z,x;
+	  float sum;
+
+
+	return 0;
+
+void Save(float x,float,z,float sum)
+  {
+	  ofstream.fout;
+      fout.
+  }
+}
+//---------------------------------------------------------------------------

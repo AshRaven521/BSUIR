@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.332,=C:\Ind1\Debug\Win32\FunctionLib.lib</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.527,C:\Ind1\Debug\Win32\FunctionLib.lib=</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.851,C:\Ind1\Debug\Win32\FunctionLib.lib=</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.684,C:\Users\ivank\Documents\RAD Studio\Projects\Project3.cbproj=C:\ПТУИР\ОАиП\Лабораторные\Projects\Lr5\Ind1\Project1.cbproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.347,=C:\ПТУИР\ОАиП\Лабораторные\Projects\Lr5\Ind1\Debug\Win32\FunctionLib.lib</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.340,=C:\Users\ivank\Documents\RAD Studio\Projects\File3.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.284,C:\Users\ivank\Documents\RAD Studio\Projects\File3.cpp=C:\ПТУИР\ОАиП\Лабораторные\Projects\Lr5\Ind1\File1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.886,C:\Ind1\Debug\Win32\FunctionLib.lib=</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.794,=C:\Ind1\Debug\Win32\FunctionLib.lib</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.365,=C:\Ind1\Debug\Win32\FunctionLib.lib</Transaction>
+  </Transactions>
+</BorlandProject>

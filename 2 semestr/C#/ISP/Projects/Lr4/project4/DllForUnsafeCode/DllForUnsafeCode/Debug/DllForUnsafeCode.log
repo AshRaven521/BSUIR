@@ -1,0 +1,5 @@
+﻿  Source.cpp
+C:\PTUIR\2 semestr\ISP\Projects\Lr4\project4\DllForUnsafeCode\DllForUnsafeCode\Source.cpp(6,38): warning C4518: __declspec(dllexport): непредвиденный спецификатор класса хранения или типа; пропуск
+C:\PTUIR\2 semestr\ISP\Projects\Lr4\project4\DllForUnsafeCode\DllForUnsafeCode\Source.cpp(6,38): warning C4502: "linkage specification" требует использования зарезервированного слова "extern" и должен предшествовать любым другим спецификаторам
+     Создается библиотека C:\PTUIR\2 semestr\ISP\Projects\Lr4\project4\DllForUnsafeCode\Debug\DllForUnsafeCode.lib и объект C:\PTUIR\2 semestr\ISP\Projects\Lr4\project4\DllForUnsafeCode\Debug\DllForUnsafeCode.exp
+  DllForUnsafeCode.vcxproj -> C:\PTUIR\2 semestr\ISP\Projects\Lr4\project4\DllForUnsafeCode\Debug\DllForUnsafeCode.dll

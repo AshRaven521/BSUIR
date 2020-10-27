@@ -1,0 +1,229 @@
+//---------------------------------------------------------------------------
+
+#pragma hdrstop
+
+#include <tchar.h>
+#include <iostream.h>
+#include <conio.h>
+#include <math.h>
+#include <windows.h>
+//---------------------------------------------------------------------------
+
+#pragma argsused
+   char * IntToChar(int);
+   int CharToInt(char *);
+   char *bukavy(char *);
+   int strlength(char *);
+   int perevodv10(char *,int);
+   char  *perevodv9(int,const int);
+int _tmain(int argc, _TCHAR* argv[])
+{
+   int len=0;
+   int dec=0;
+   char *nine;
+   char *strpreobraz;
+   SetConsoleCP(1251);
+   SetConsoleOutputCP(1251);
+   char str[10];
+cout<<"Введите число в двенадцатеричной системе счисления :";
+cin>>str;
+  strpreobraz=bukavy(str);
+cout<<"Введенное число :"<<strpreobraz;
+	len=strlength(str);
+	dec=perevodv10(str,len);
+	cout<<"\nЗаданное число,переведенное в десятичную систему счисления :"<<dec;
+	nine=perevodv9(dec,len);
+	cout<<"\nЗаданное число,переведенное в девятичную систему счисления :"<<nine;
+
+	int p,q;
+	char s;
+	cout<<"\n\n\nРешение без массивов"<<endl;
+	p=12;
+	q=9;
+	cout<<"Введите число в девятиричной системе: ";
+	while(s=getchar(), s!='\n');
+	long long int t=0;
+	while(s=getchar(), s!='\n')
+	  {
+		  if(s==' ')
+			continue;
+		  t=t*p;
+		  if(s<='9')
+			t=t+(s-'0');
+		  else
+			t=t+(s-'A'+10);
+	  }
+	cout<<"В десятичной системе :"<<t<<endl;
+	cout<< "В "<<q<<"-ичной системе :";
+	if(t==0) cout<<0;
+	long long int tmp=1;
+	while(tmp<=t) tmp*=q;
+	while(tmp>1)
+	{
+		tmp/=q;
+		if(t/tmp<10) cout<<t/tmp;
+		  else cout<<'A'+t/tmp-10;
+		  t%=tmp;
+	}
+	cout<<endl;
+	getch();
+	return 0;
+}
+   char * IntToChar(int N)
+{
+	int count = 1;
+	int m=N;
+	while (m=m/10)
+		count++;
+	int *p = new int[count];
+	int i = count-1;
+	while (N)
+	  {
+		p[i] = N % 10;
+		N /= 10;
+		i--;
+	  }
+	char *b;
+	b=new char[count];
+	for(i=0;i<count;i++)
+	{
+		b[i]=p[i]+'0';
+	}
+
+	return b;
+}
+
+   int  CharToInt(char *str1)
+{
+
+	int i=0;
+	int p[10];
+	while(str1[i]!='\0')
+	{
+		p[i]=str1[i]-'0';
+		i++;
+	}
+	int count=i;
+	int f=0;
+	for ( i = 0; i<count; i++)
+	{
+		f=f+p[i]*powf(10,count-1-i);
+	}
+
+	return f;
+}
+
+   char *bukavy(char *strx)
+	 {
+	   char strresult[50];
+	   int i=0,k=0;
+		 while(strx[i]!='\0')
+		   {
+			 char cx[3];
+			   switch(strx[i])
+				 {
+					 case 'A':
+					  {cx[0]='1';cx[1]='0';cx[2]='\0';break;}
+					 case 'B':
+					  {cx[0]='1';cx[1]='1';cx[2]='\0';break;}
+					 case 'C':
+					  {cx[0]='1';cx[1]='2';cx[2]='\0';break;}
+					 case 'D':
+					  {cx[0]='1';cx[1]='3';cx[2]='\0';break;}
+					 case 'E':
+					  {cx[0]='1';cx[1]='4';cx[2]='\0';break;}
+					 case 'F':
+					  {cx[0]='1';cx[1]='5';cx[2]='\0';break;}
+					 default:
+					  {
+						  cx[0]=strx[i];
+						  cx[1]='\0';
+
+					 break;
+					  }
+				 }
+					 int j=0;
+				   while(cx[j]!='\0')
+					 {
+						 strresult[k]=cx[j];
+						 j++;
+						 k++;
+					 }
+			  i++;
+		   }
+		strresult[k]='\0';
+		return strresult;
+	 }
+
+   int strlength(char *strx)
+	 {
+		 int i=0;
+		 while(strx[i]!='\0')
+		   {
+			   i++;
+		   }
+		 return i;
+	 }
+
+	 int perevodv10(char *strx,int len)
+	   {
+		   char strz[2];
+		   int sum=0;
+		   int a;
+		   for(int i=0;i<len;i++)
+			 {
+				 strz[0]=strx[i];
+				 strz[1]='\0';
+				 switch(strx[i])
+				 {
+					 case 'A':
+					  {a=10;break;}
+					 case 'B':
+					  {a=11;break;}
+					 case 'C':
+					  {a=12;break;}
+					 case 'D':
+					  {a=13;break;}
+					 case 'E':
+					  {a=14;break;}
+					 case 'F':
+					  {a=15;break;}
+					 default:
+					  {
+						  a=CharToInt(strz);break;
+					  }
+				 }
+
+				 sum=sum+a * pow(12.0,len-i-1);
+			 }
+		   return sum;
+	   }
+
+	 char *perevodv9(int dec,const int len)
+	   {
+		  const int lL=len+1;
+		  char *c=new char[len + 20];
+		  char *cC;
+		  int a=dec;
+		  int b=dec;
+		  int i=0;
+			//сейчас цикл while сделает нужное,но перевернет цифры
+			while(b>0)
+			  {
+				 a=b%9;
+				 b=b/9;
+				 cC=IntToChar(a);
+				 c[i]=cC[0];
+				 i++;
+			  }
+			c[i]='\0';
+			//переворачиваем итоговые цифры
+			char *sf=new char[i];
+			  for(int j=0;j<i;j++)
+				{
+					sf[i-j-1]=c[j];
+				}
+		   sf[i]='\0';
+		   return sf;
+	   }
+//---------------------------------------------------------------------------

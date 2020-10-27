@@ -1,0 +1,8 @@
+/*string[] slova = f.Split(' ', ',', '.', '!');//разбиваем строку на слова
+            string inverse = "";
+            for (int i = slova.Length - 1; i >= 0; i--)//у каждого массива в c# есть метод .Length(этот метод возвращает кол-во элементов с отсчетом от 1,здесь же нужно от 0,т.к массив)
+            {
+                inverse = inverse + " " + slova[i];
+            }
+            Console.WriteLine(inverse);
+            Console.Write("\n\n\n");*/

@@ -1,0 +1,36 @@
+//---------------------------------------------------------------------------
+
+#include <vcl.h>
+#pragma hdrstop
+
+#include <tchar.h>
+#include <math.h>
+#include <iostream.h>
+#include <conio.h>
+#include <windows.h>
+//---------------------------------------------------------------------------
+
+#pragma argsused
+int _tmain(int argc, _TCHAR* argv[])
+{
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
+  float a,b,c,s,f;
+cout<<"a=";
+cin>>a;
+cout<<"b=";
+cin>>b;
+cout<<"c=";
+cin>>c;
+f=a+b+c;
+	s=100*a+10*b+c;
+	cout<<"s="<<s;
+	  if(s>99 && s<1000) cout<<"\nВведенное число является трехзначным";
+	 else cout<<"\nВведенное число не удовлетворяет условиям задачи";
+	  if(powf(s,2)>powf(f,3)) cout<<"\nTrue";
+	 else cout<<"\nFalse";
+getch();
+
+	return 0;
+}
+//---------------------------------------------------------------------------
