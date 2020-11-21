@@ -1,0 +1,122 @@
+﻿Выполняется установка сборки 'c:\PTUIR\3 semestr\ISP\Lr2\Lr2WindowsService\bin\Release\Lr2WindowsService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = c:\PTUIR\3 semestr\ISP\Lr2\Lr2WindowsService\bin\Release\Lr2WindowsService.exe
+   logfile = c:\PTUIR\3 semestr\ISP\Lr2\Lr2WindowsService\bin\Release\Lr2WindowsService.InstallLog
+Устанавливается служба Lr2 Windows Service...
+Создается исходный EventLog Lr2 Windows Service в журнале Application...
+Выполняется откат для сборки 'c:\PTUIR\3 semestr\ISP\Lr2\Lr2WindowsService\bin\Release\Lr2WindowsService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = c:\PTUIR\3 semestr\ISP\Lr2\Lr2WindowsService\bin\Release\Lr2WindowsService.exe
+   logfile = c:\PTUIR\3 semestr\ISP\Lr2\Lr2WindowsService\bin\Release\Lr2WindowsService.InstallLog
+Восстанавливается исходное состояние журнала событий для источника Lr2 Windows Service.
+Выполняется установка сборки 'C:\PTUIR\3 semestr\ISP\Lr2\Lr2WindowsService\bin\Release\Lr2WindowsService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\PTUIR\3 semestr\ISP\Lr2\Lr2WindowsService\bin\Release\Lr2WindowsService.InstallLog
+   assemblypath = C:\PTUIR\3 semestr\ISP\Lr2\Lr2WindowsService\bin\Release\Lr2WindowsService.exe
+Устанавливается служба Lr2 Windows Service...
+Служба Lr2 Windows Service успешно установлена.
+Создается исходный EventLog Lr2 Windows Service в журнале Application...
+Выполняется фиксация сборки 'C:\PTUIR\3 semestr\ISP\Lr2\Lr2WindowsService\bin\Release\Lr2WindowsService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\PTUIR\3 semestr\ISP\Lr2\Lr2WindowsService\bin\Release\Lr2WindowsService.InstallLog
+   assemblypath = C:\PTUIR\3 semestr\ISP\Lr2\Lr2WindowsService\bin\Release\Lr2WindowsService.exe
+Выполняется удаление сборки 'c:\PTUIR\3 semestr\ISP\Lr2\Lr2WindowsService\bin\Release\Lr2WindowsService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = c:\PTUIR\3 semestr\ISP\Lr2\Lr2WindowsService\bin\Release\Lr2WindowsService.InstallLog
+   assemblypath = c:\PTUIR\3 semestr\ISP\Lr2\Lr2WindowsService\bin\Release\Lr2WindowsService.exe
+Выполняется удаление источника EventLog Lr2 Windows Service.
+Выполняется удаление службы Lr2 Windows Service из системы...
+Служба Lr2 Windows Service успешно удалена из системы.
+Выполняется удаление сборки 'c:\PTUIR\3 semestr\ISP\Lr2\Lr2WindowsService\bin\Release\Lr2WindowsService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = c:\PTUIR\3 semestr\ISP\Lr2\Lr2WindowsService\bin\Release\Lr2WindowsService.InstallLog
+   assemblypath = c:\PTUIR\3 semestr\ISP\Lr2\Lr2WindowsService\bin\Release\Lr2WindowsService.exe
+Выполняется удаление источника EventLog Lr2 Windows Service.
+Предупреждение. Источник Lr2 Windows Service не зарегистрирован на локальном компьютере.
+Выполняется удаление службы Lr2 Windows Service из системы...
+При выполнении программы установки System.ServiceProcess.ServiceInstaller во время установки возникло исключение.
+System.ComponentModel.Win32Exception: Указанная служба не установлена
+При удалении из системы возникло исключение. Это исключение будет проигнорировано, и удаление из системы будет продолжено. Однако после завершения удаления данное приложение может оказаться не полностью удаленным.
+Выполняется установка сборки 'c:\PTUIR\3 semestr\ISP\Lr2\Lr2WindowsService\bin\Release\Lr2WindowsService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = c:\PTUIR\3 semestr\ISP\Lr2\Lr2WindowsService\bin\Release\Lr2WindowsService.InstallLog
+   assemblypath = c:\PTUIR\3 semestr\ISP\Lr2\Lr2WindowsService\bin\Release\Lr2WindowsService.exe
+Устанавливается служба Lr2 Windows Service...
+Служба Lr2 Windows Service успешно установлена.
+Создается исходный EventLog Lr2 Windows Service в журнале Application...
+Выполняется фиксация сборки 'c:\PTUIR\3 semestr\ISP\Lr2\Lr2WindowsService\bin\Release\Lr2WindowsService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = c:\PTUIR\3 semestr\ISP\Lr2\Lr2WindowsService\bin\Release\Lr2WindowsService.InstallLog
+   assemblypath = c:\PTUIR\3 semestr\ISP\Lr2\Lr2WindowsService\bin\Release\Lr2WindowsService.exe
+Выполняется удаление сборки 'c:\PTUIR\3 semestr\ISP\Lr2\Lr2WindowsService\bin\Release\Lr2WindowsService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = c:\PTUIR\3 semestr\ISP\Lr2\Lr2WindowsService\bin\Release\Lr2WindowsService.InstallLog
+   assemblypath = c:\PTUIR\3 semestr\ISP\Lr2\Lr2WindowsService\bin\Release\Lr2WindowsService.exe
+Выполняется удаление источника EventLog Lr2 Windows Service.
+Выполняется удаление службы Lr2 Windows Service из системы...
+Служба Lr2 Windows Service успешно удалена из системы.
+Выполняется установка сборки 'c:\PTUIR\3 semestr\ISP\Lr2\Lr2WindowsService\bin\Release\Lr2WindowsService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = c:\PTUIR\3 semestr\ISP\Lr2\Lr2WindowsService\bin\Release\Lr2WindowsService.InstallLog
+   assemblypath = c:\PTUIR\3 semestr\ISP\Lr2\Lr2WindowsService\bin\Release\Lr2WindowsService.exe
+Устанавливается служба Lr2 Windows Service...
+Служба Lr2 Windows Service успешно установлена.
+Создается исходный EventLog Lr2 Windows Service в журнале Application...
+Выполняется фиксация сборки 'c:\PTUIR\3 semestr\ISP\Lr2\Lr2WindowsService\bin\Release\Lr2WindowsService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = c:\PTUIR\3 semestr\ISP\Lr2\Lr2WindowsService\bin\Release\Lr2WindowsService.InstallLog
+   assemblypath = c:\PTUIR\3 semestr\ISP\Lr2\Lr2WindowsService\bin\Release\Lr2WindowsService.exe
+Выполняется удаление сборки 'c:\PTUIR\3 semestr\ISP\Lr2\Lr2WindowsService\bin\Release\Lr2WindowsService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = c:\PTUIR\3 semestr\ISP\Lr2\Lr2WindowsService\bin\Release\Lr2WindowsService.InstallLog
+   assemblypath = c:\PTUIR\3 semestr\ISP\Lr2\Lr2WindowsService\bin\Release\Lr2WindowsService.exe
+Выполняется удаление источника EventLog Lr2 Windows Service.
+Выполняется удаление службы Lr2 Windows Service из системы...
+Служба Lr2 Windows Service успешно удалена из системы.
+Попытка останова службы Lr2 Windows Service.
+Выполняется установка сборки 'c:\PTUIR\3 semestr\ISP\Lr2\Lr2WindowsService\bin\Release\Lr2WindowsService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = c:\PTUIR\3 semestr\ISP\Lr2\Lr2WindowsService\bin\Release\Lr2WindowsService.InstallLog
+   assemblypath = c:\PTUIR\3 semestr\ISP\Lr2\Lr2WindowsService\bin\Release\Lr2WindowsService.exe
+Устанавливается служба Lr2 Windows Service...
+Служба Lr2 Windows Service успешно установлена.
+Создается исходный EventLog Lr2 Windows Service в журнале Application...
+Выполняется фиксация сборки 'c:\PTUIR\3 semestr\ISP\Lr2\Lr2WindowsService\bin\Release\Lr2WindowsService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = c:\PTUIR\3 semestr\ISP\Lr2\Lr2WindowsService\bin\Release\Lr2WindowsService.InstallLog
+   assemblypath = c:\PTUIR\3 semestr\ISP\Lr2\Lr2WindowsService\bin\Release\Lr2WindowsService.exe
+Выполняется удаление сборки 'c:\PTUIR\3 semestr\ISP\Lr3\Lr2WindowsService\bin\Release\Lr2WindowsService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = c:\PTUIR\3 semestr\ISP\Lr3\Lr2WindowsService\bin\Release\Lr2WindowsService.InstallLog
+   assemblypath = c:\PTUIR\3 semestr\ISP\Lr3\Lr2WindowsService\bin\Release\Lr2WindowsService.exe
+Выполняется удаление источника EventLog Lr2 Windows Service.
+Выполняется удаление службы Lr2 Windows Service из системы...
+Служба Lr2 Windows Service успешно удалена из системы.
+Выполняется установка сборки 'c:\PTUIR\3 semestr\ISP\Lr3\Lr2WindowsService\bin\Release\Lr2WindowsService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = c:\PTUIR\3 semestr\ISP\Lr3\Lr2WindowsService\bin\Release\Lr2WindowsService.InstallLog
+   assemblypath = c:\PTUIR\3 semestr\ISP\Lr3\Lr2WindowsService\bin\Release\Lr2WindowsService.exe
+Устанавливается служба Lr2 Windows Service...
+Служба Lr2 Windows Service успешно установлена.
+Создается исходный EventLog Lr2 Windows Service в журнале Application...
+Выполняется фиксация сборки 'c:\PTUIR\3 semestr\ISP\Lr3\Lr2WindowsService\bin\Release\Lr2WindowsService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = c:\PTUIR\3 semestr\ISP\Lr3\Lr2WindowsService\bin\Release\Lr2WindowsService.InstallLog
+   assemblypath = c:\PTUIR\3 semestr\ISP\Lr3\Lr2WindowsService\bin\Release\Lr2WindowsService.exe

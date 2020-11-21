@@ -1,0 +1,20 @@
+﻿<Window x:Class="Lr2WpfApplication.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lr2WpfApplication"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <TextBox x:Name="sourceText" HorizontalAlignment="Left" Height="35" Margin="75,105,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="305"/>
+        <TextBox x:Name="archiveText" HorizontalAlignment="Left" Height="35" Margin="75,175,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="305"/>
+        <TextBox x:Name="extractText" HorizontalAlignment="Left" Height="35" Margin="75,250,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="305"/>
+        <Button Content="Start monitor" HorizontalAlignment="Left" Margin="80,325,0,0" VerticalAlignment="Top" Width="235" Height="55" Click="Button_Click"/>
+        <Label x:Name="sourceLabel" Content="Put here path to your's source folder" HorizontalAlignment="Left" Margin="75,85,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="archiveLabel" Content="Put here path to your's archive folder" HorizontalAlignment="Left" Margin="75,150,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="extractLabel" Content="Put here path to your's extract folder" HorizontalAlignment="Left" Margin="74,230,0,0" VerticalAlignment="Top"/>
+        <Button Content="Stop monitor" HorizontalAlignment="Left" Margin="360,325,0,0" VerticalAlignment="Top" Width="240" Height="55" Click="Button_Click_1"/>
+
+    </Grid>
+</Window>
