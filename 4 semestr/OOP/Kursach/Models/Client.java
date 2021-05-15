@@ -7,6 +7,16 @@ public class Client
     private int clientId;
     private String name;
 
+    public void setClientId(int clientId)
+    {
+        this.clientId = clientId;
+    }
+
+    public void setName(String name)
+    {
+        this.name = name;
+    }
+
     public Machine getMachine()
     {
         return machine;
@@ -21,5 +31,4 @@ public class Client
     {
         return name;
     }
-    //private int id = machine.getMachineId();
 }

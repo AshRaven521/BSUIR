@@ -1,4 +1,4 @@
-package Models;
+package Utilities;
 
 public interface IConnection
 {

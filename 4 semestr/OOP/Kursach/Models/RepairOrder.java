@@ -26,4 +26,24 @@ public class RepairOrder
     {
         return cost;
     }
+
+    public void setRepairOrderId(int repairOrderId)
+    {
+        this.repairOrderId = repairOrderId;
+    }
+
+    public void setName(String name)
+    {
+        this.name = name;
+    }
+
+    public void setDuration(int duration)
+    {
+        this.duration = duration;
+    }
+
+    public void setCost(int cost)
+    {
+        this.cost = cost;
+    }
 }
