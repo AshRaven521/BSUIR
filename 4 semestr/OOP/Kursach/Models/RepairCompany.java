@@ -14,6 +14,9 @@ public class RepairCompany implements IConnection
     private Connection connection;
     private Statement state;
     private ResultSet result;
+    String url = "jdbc:mysql://localhost:3306/oop_kursach";
+    String user = "root";
+    String password = "0000";
 
     public ArrayList<Machine> getMachines()
     {
@@ -47,11 +50,42 @@ public class RepairCompany implements IConnection
 
     public  void connect()
     {
-        String url = "jdbc:mysql://localhost:3306/oop_kursach";
-        String user = "root";
-        String password = "0000";
 
-        String sqlQuery = "SELECT * from machines";
+        String sqlQuery = "SELECT * from repairs_order, clients WHERE repairs_order.idclients = clients.idclients";
+        try
+        {
+            Class.forName("com.mysql.cj.jdbc.Driver").getDeclaredConstructor().newInstance();
+            connection = DriverManager.getConnection(url, user, password);
+            state = connection.createStatement();
+            result = state.executeQuery(sqlQuery);
+
+            orders.clear();
+            while (result.next())
+            {
+                RepairOrder order = new RepairOrder();
+                order.setRepairOrderId(result.getInt("idrepairs_order"));
+                order.setName(result.getString("name"));
+                order.setDuration(result.getString("duration"));
+                order.setCost(result.getInt("cost"));
+                order.setClientName(result.getString("clients.name"));
+                orders.add(order);
+            }
+        }
+        catch (Exception exception)
+        {
+            System.out.println("Something goes wrong: " + exception.getStackTrace());
+        }
+        finally
+        {
+            try { connection.close(); } catch(SQLException se) { }
+            try { state.close(); } catch(SQLException se) { }
+            try { result.close(); } catch(SQLException se) { }
+        }
+    }
+
+    public void connectToMachinesTable()
+    {
+        String sqlQuery = "SELECT * from machines,orders_machines WHERE orders_machines.idmachines = machines.idmachines";
         try
         {
             Class.forName("com.mysql.cj.jdbc.Driver").getDeclaredConstructor().newInstance();
@@ -62,10 +96,11 @@ public class RepairCompany implements IConnection
             while (result.next())
             {
                 Machine machine = new Machine();
-                machine.setMachineId(result.getInt("idmachines"));
+                machine.setYearOfIssue(result.getInt("year_of_issue"));
                 machine.setProducingCountry(result.getString("producing-country"));
                 machine.setBrand(result.getString("brand"));
-                machine.setYearOfIssue(result.getInt("year_of_issue"));
+                machine.setMachineId(result.getInt("orders_machines.idmachines"));
+                machine.setOrderId(result.getInt("orders_machines.idorders"));
                 machines.add(machine);
             }
         }

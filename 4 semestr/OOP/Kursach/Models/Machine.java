@@ -8,7 +8,17 @@ public class Machine
     private String producingCountry;
     private int yearOfIssue;
     private String brand;
+    private int orderId;
 
+    public void setOrderId(int orderId)
+    {
+        this.orderId = orderId;
+    }
+
+    public int getOrderId()
+    {
+        return orderId;
+    }
 
     public int getMachineId()
     {

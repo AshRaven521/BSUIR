@@ -4,8 +4,19 @@ public class RepairOrder
 {
     private int repairOrderId;
     private String name;
-    private int duration;
+    private String duration;
     private int cost;
+    private String ClientName;
+
+    public void setClientName(String clientName)
+    {
+        this.ClientName = clientName;
+    }
+
+    public String  getClientName()
+    {
+        return ClientName;
+    }
 
     public int getRepairOrderId()
     {
@@ -17,7 +28,7 @@ public class RepairOrder
         return name;
     }
 
-    public int getDuration()
+    public String getDuration()
     {
         return duration;
     }
@@ -37,7 +48,7 @@ public class RepairOrder
         this.name = name;
     }
 
-    public void setDuration(int duration)
+    public void setDuration(String duration)
     {
         this.duration = duration;
     }
