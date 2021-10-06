@@ -1,0 +1,25 @@
+﻿<h3>EngineDetails</h3>
+
+@if (Engine != null)
+{
+    <img src="@ImageSrc" class="img-thumbnail" width="150" />
+    <div>
+        <p>@Engine.EngineName - @Engine.Description</p>
+        <div class="badge badge-info ">
+            @Engine.Price $
+        </div>
+</div>
+}
+@code {
+    [Parameter]
+    public DetailsViewModel Engine { get; set; }
+    [Parameter]
+    public EventCallback<DetailsViewModel> EngineChanged { get; set; }
+    private string ImageSrc
+    {
+        get
+        {
+            return $"images/{Engine.Image}";
+        }
+    }
+}

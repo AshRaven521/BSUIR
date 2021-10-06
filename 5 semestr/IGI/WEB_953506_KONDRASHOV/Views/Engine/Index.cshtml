@@ -1,0 +1,56 @@
+﻿@model ListViewModel<Engine>
+
+@{
+    ViewData["Title"] = "Разборка";
+
+    var categories = ViewData["Groups"] as IEnumerable<EngineClass>;
+    int currentGroup = (int)ViewData["CurrentGroup"];
+
+    var text = currentGroup != 0
+        ? categories
+            .FirstOrDefault(g => g.Id == currentGroup)?
+            .Name
+        : "Все";
+}
+
+<div class="row">
+    <div class="col-2">
+        <div class="dropdown mt-2">
+            <a class="btn btn-secondary dropdown-toggle"
+               asp-action="Index" asp-controller="Engine"
+               role="button"
+               id="dropdownMenuLink"
+               data-toggle="dropdown"
+               aria-haspopup="true" aria-expanded="false">
+                @text
+            </a>
+            <div class="dropdown-menu"
+                 aria-labelledby="dropdownMenuLink">
+                <a class="dropdown-item"
+                   asp-action="Index"
+                   asp-controller="Engine">Все</a>
+
+                @foreach (var item in categories)
+                {
+                    <a class="dropdown-item"
+                       asp-action="Index"
+                       asp-controller="Engine"
+                       asp-route-group="@item.Id"
+                       asp-route-pageNo="1">@item.Name</a>
+                }
+            </div>
+        </div>
+    </div>
+    <div class="col-10">
+        <div class="card-group" id="list">
+            <partial name="ListPartial" model="@Model" />
+        </div>
+        <pager page-current="@Model.CurrentPage"
+               page-total="@Model.TotalPages"
+               action="Index"
+               controller="Engine"
+               groupId="@currentGroup">
+
+        </pager>
+    </div>
+</div>

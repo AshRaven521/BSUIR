@@ -1,0 +1,21 @@
+﻿@using WEB_953506_KONDRAHOV.BLAZOR.Client.Components
+@page "/apidemo"
+@inject HttpClient client
+<div class="container">
+    <EngineList @bind-Engines="@Engines" SelectedObjectChanged="ShowDetails"></EngineList>
+    <EngineDetails @bind-Engine="SelectedEngine"></EngineDetails>
+</div>
+@code {
+    [Parameter]
+    public IEnumerable<ListViewModel> Engines { get; set; }
+    protected override async Task OnInitializedAsync()
+    {
+        Engines = await client.GetFromJsonAsync<IEnumerable<ListViewModel>>("api/Engines/");
+    }
+    [Parameter]
+    public DetailsViewModel SelectedEngine { get; set; }
+    private async Task ShowDetails(int id)
+    {
+        SelectedEngine = await client.GetFromJsonAsync<DetailsViewModel>($"api/Engines/{id}");
+    }
+}

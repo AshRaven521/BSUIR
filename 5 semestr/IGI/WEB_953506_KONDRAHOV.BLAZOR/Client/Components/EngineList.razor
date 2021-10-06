@@ -1,0 +1,39 @@
+﻿<h3>EnginesList</h3>
+@if (Engines == null)
+{
+    <p>Загрузка ...</p>
+}
+else
+{
+    <div class="list-group">
+        @{
+            var i = 1;
+            foreach (var engine in Engines)
+            {
+                <button type="button" class="list-group-item list-group-item-action
+                        @(SelectedId == engine.EngineId ? "active" : "")"
+                        @onclick="@(e => Selected(e, engine.EngineId))">
+                    @(i++) - @engine.EngineName
+                </button>
+            }
+        }
+    </div>
+}
+@code {
+    [Parameter]
+    public IEnumerable<ListViewModel> Engines { get; set; }
+    [Parameter]
+    public EventCallback<IEnumerable<ListViewModel>> EnginesChanged { get; set; }
+
+    private int SelectedId = 0;
+
+    [Parameter]
+    public EventCallback<int> SelectedObjectChanged { get; set; }
+
+    private void Selected(MouseEventArgs e, int id)
+    {
+        SelectedId = id;
+        SelectedObjectChanged.InvokeAsync(id);
+    }
+}
+
