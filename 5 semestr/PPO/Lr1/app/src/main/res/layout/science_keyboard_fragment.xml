@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:configChanges="orientation|screenSize"
+    android:layout_width="match_parent"
+    android:background="@color/colorBluePrimary"
+    android:layout_height="match_parent"
+    android:rowCount="5"
+    android:columnCount="3"
+    android:id="@+id/science_grid_l">
+
+    <Button
+        android:id="@+id/but_sin"
+        style="@style/Button.Science"
+        android:text="sin"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/but_cos"
+        style="@style/Button.Science"
+        android:text="cos"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/but_tan"
+        style="@style/Button.Science"
+        android:text="tan"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/but_pi"
+        style="@style/Button.Science"
+        android:text="pi"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/but_ctg"
+        style="@style/Button.Science"
+        android:text="ctg"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/but_e"
+        style="@style/Button.Science"
+        android:text="e"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/but_sqrt"
+        style="@style/Button.Science"
+        android:text="sqrt"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/but_mod"
+        style="@style/Button.Science"
+        android:text="%"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/but_x_n"
+        style="@style/Button.Science"
+        android:text="^"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/but_ln"
+        style="@style/Button.Science"
+        android:text="ln"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/but_log_2"
+        style="@style/Button.Science"
+        android:text="log2"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/but_log_10"
+        style="@style/Button.Science"
+        android:text="log10"
+        android:textSize="20sp" />
+
+
+</GridLayout>
