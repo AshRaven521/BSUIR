@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Новости</string>
+    <string name="article_image">Article image</string>
+    <string name="change_url">Введите ссылку</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="validation_empty">Empty url</string>
+</resources>
