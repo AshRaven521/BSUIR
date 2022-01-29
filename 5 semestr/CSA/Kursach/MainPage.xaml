@@ -1,0 +1,140 @@
+﻿<Page
+    x:Class="uwp_test.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:uwp_test"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:data="using:uwp_test.Models"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Width="1018" Height="751"
+    >
+    <Grid Height="741" VerticalAlignment="Top">
+        <GridView ItemsSource="{x:Bind Books}"  
+                  Height="500" Width="430"
+                  BorderBrush="Blue" BorderThickness="5"
+                  HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,40,0,0">
+            <GridView.ItemTemplate>
+                <DataTemplate x:DataType="data:Book">
+                    <Grid BorderBrush="Black" BorderThickness="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="25"/>
+                            <ColumnDefinition Width="100"/>
+                            <ColumnDefinition Width="100"/>
+                            <ColumnDefinition Width="100"/>
+                            <ColumnDefinition Width="100"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Height="25" Margin="0,0,0,0" FontSize="12" Text="{x:Bind Id}" />
+                        <TextBlock Height="25" Margin="0,0,0,0" FontSize="12" Text="{x:Bind Name}" Grid.Column="1"/>
+                        <TextBlock Height="25" Margin="0,0,0,0" FontSize="12" Text="{x:Bind Latitude}" Grid.Column="2" />
+                        <TextBlock Height="25" Margin="0,0,0,0" FontSize="12" Text="{x:Bind Longitude}" Grid.Column="3"/>
+                        <TextBlock Height="25" Margin="0,0,0,0" FontSize="12" Text="{x:Bind Population}" Grid.Column="4"/>
+                    </Grid>
+                </DataTemplate>
+            </GridView.ItemTemplate>
+        </GridView>
+
+        <Grid>
+            <Button x:Name="distanceButton" Height="35" 
+                Margin="34,549,0,0" 
+                Content="Рассчитать расстояние и время"
+                Click="distanceButton_Click" VerticalAlignment="Top"/>
+            <Button x:Name="clusterizationButton" Height="35" 
+                Margin="41,697,0,0"
+                Content="Кластеризовать Метод1"
+                Click="clusterizationButton_Click" 
+                VerticalAlignment="Top"/>
+            <ComboBox Name="clusterNumberComboBox" Height="30"
+                  Margin="740,21,0,0"
+                  SelectionChanged="clusterNumberComboBox_SelectionChanged"
+                  RenderTransformOrigin="4.491,0.417"/>
+            <TextBlock Text="Номер кластера :"
+                   HorizontalAlignment="Left" 
+                   VerticalAlignment="Top"
+               Margin="624,20,0,0"
+                   Height="30"/>
+            <TextBlock Text="Количество кластеров:"
+                   HorizontalAlignment="Left"
+                   Margin="28,605,0,0" VerticalAlignment="Top"/>
+            <TextBox HorizontalAlignment="Left"
+                 Height="30" 
+                 Margin="182,600,0,0" TextWrapping="Wrap" Text="3" 
+                 VerticalAlignment="Top"
+                 Width="50"
+                 Name="clusterNumberTextBox" />
+
+            <TextBlock Text="Максимальное время:"
+                   HorizontalAlignment="Left"
+                   Margin="28,641,0,0" VerticalAlignment="Top"/>
+            <TextBox HorizontalAlignment="Left"
+                 Height="30" 
+                 Margin="182,638,0,0" TextWrapping="Wrap" Text="2" 
+                 VerticalAlignment="Top"
+                 Width="50"
+                 Name="maxTimeTextBox" />
+
+            <TextBlock Text="Город:"
+                   HorizontalAlignment="Left" 
+                   VerticalAlignment="Top"
+                   Margin="283,594,0,0"
+                   Height="30"/>
+            <!--ComboBox Name="cityComboBox" Height="30" Width="250"
+                  Margin="283,618,0,0"
+                  SelectionChanged="clusterNumberComboBox_SelectionChanged"
+                  RenderTransformOrigin="4.491,0.417"/-->
+            <ComboBox Name="cityComboBox" ItemsSource="{Binding}" Height="30" Width="250"
+                  Margin="283,618,0,0"
+                  RenderTransformOrigin="4.491,0.417">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel>
+                            <TextBlock Text="{Binding Id}"/>
+                            <TextBlock Text="{Binding Name}"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+            <CheckBox Name="cityTypeCheckBox"
+                      Margin="244,592,0,0" VerticalAlignment="Top"
+                      IsChecked="False" 
+                      Checked="cityTypeCheckBox_Checked" Unchecked="cityTypeCheckBox_Unchecked"/>
+
+            <GridView x:Name="clusterInfoGrid" ItemsSource="{x:Bind Clusters}"  
+                  Height="460" Width="430"
+                  BorderBrush="Blue" BorderThickness="2"
+                  HorizontalAlignment="Left" VerticalAlignment="Top" Margin="519,73,0,0">
+                <GridView.ItemTemplate>
+                    <DataTemplate x:DataType="data:SubCluster">
+                        <Grid BorderBrush="Black" BorderThickness="1">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="100"/>
+                                <ColumnDefinition Width="100"/>
+                                <ColumnDefinition Width="100"/>
+                                <ColumnDefinition Width="100"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Height="25" Margin="0,0,0,0" FontSize="12" Text="{x:Bind Name1}" />
+                            <TextBlock Height="25" Margin="0,0,0,0" FontSize="12" Text="{x:Bind Name2}" Grid.Column="1" />
+                            <TextBlock Height="25" Margin="0,0,0,0" FontSize="12" Text="{x:Bind Distance}" Grid.Column="2"/>
+                            <TextBlock Height="25" Margin="0,0,0,0" FontSize="12" Text="{x:Bind Time}" Grid.Column="3"/>
+                        </Grid>
+                    </DataTemplate>
+                </GridView.ItemTemplate>
+            </GridView>
+
+            <TextBlock Text="Центроид кластера :"
+                   HorizontalAlignment="Left" 
+                   Margin="525,570,0,0"
+                   VerticalAlignment="Top"
+                   Name="clusterInfo"/>
+            <Button Content="Открыть карты" 
+                VerticalAlignment="Top" 
+                Width="140" 
+                Margin="700,660,0,0" Height="35"
+                Name="showMapButton" Click="showMapButton_Click"/>
+            <Button x:Name="clusterizationButtonTest" Height="35" 
+                Margin="242,697,0,0"
+                Content="Кластеризовать Метод2"                 
+                VerticalAlignment="Top" Click="clusterizationButtonTest_Click"/>
+        </Grid>
+    </Grid>
+</Page>
