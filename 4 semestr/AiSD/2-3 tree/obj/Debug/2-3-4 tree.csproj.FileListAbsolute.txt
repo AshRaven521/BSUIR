@@ -1,0 +1,7 @@
+C:\PTUIR\4 semestr\AiSD\2-3 tree\bin\Debug\2-3 tree.exe.config
+C:\PTUIR\4 semestr\AiSD\2-3 tree\bin\Debug\2-3 tree.exe
+C:\PTUIR\4 semestr\AiSD\2-3 tree\bin\Debug\2-3 tree.pdb
+C:\PTUIR\4 semestr\AiSD\2-3 tree\obj\Debug\2-3-4 tree.csproj.CoreCompileInputs.cache
+C:\PTUIR\4 semestr\AiSD\2-3 tree\obj\Debug\2-3 tree.exe
+C:\PTUIR\4 semestr\AiSD\2-3 tree\obj\Debug\2-3 tree.pdb
+C:\PTUIR\4 semestr\AiSD\2-3 tree\obj\Debug\2-3-4 tree.csprojAssemblyReference.cache
