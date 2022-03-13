@@ -1,0 +1,7 @@
+C:\PTUIR\6 semestr\ISOB\Lr1\bin\Debug\Lr1.exe.config
+C:\PTUIR\6 semestr\ISOB\Lr1\bin\Debug\Lr1.exe
+C:\PTUIR\6 semestr\ISOB\Lr1\bin\Debug\Lr1.pdb
+C:\PTUIR\6 semestr\ISOB\Lr1\obj\Debug\Lr1.csproj.AssemblyReference.cache
+C:\PTUIR\6 semestr\ISOB\Lr1\obj\Debug\Lr1.csproj.CoreCompileInputs.cache
+C:\PTUIR\6 semestr\ISOB\Lr1\obj\Debug\Lr1.exe
+C:\PTUIR\6 semestr\ISOB\Lr1\obj\Debug\Lr1.pdb
