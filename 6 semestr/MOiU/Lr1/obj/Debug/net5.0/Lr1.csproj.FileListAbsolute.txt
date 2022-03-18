@@ -1,0 +1,16 @@
+C:\PTUIR\6 semestr\MOiU\Lr1\bin\Debug\net5.0\Lr1.exe
+C:\PTUIR\6 semestr\MOiU\Lr1\bin\Debug\net5.0\Lr1.deps.json
+C:\PTUIR\6 semestr\MOiU\Lr1\bin\Debug\net5.0\Lr1.runtimeconfig.json
+C:\PTUIR\6 semestr\MOiU\Lr1\bin\Debug\net5.0\Lr1.runtimeconfig.dev.json
+C:\PTUIR\6 semestr\MOiU\Lr1\bin\Debug\net5.0\Lr1.dll
+C:\PTUIR\6 semestr\MOiU\Lr1\bin\Debug\net5.0\ref\Lr1.dll
+C:\PTUIR\6 semestr\MOiU\Lr1\bin\Debug\net5.0\Lr1.pdb
+C:\PTUIR\6 semestr\MOiU\Lr1\obj\Debug\net5.0\Lr1.csproj.AssemblyReference.cache
+C:\PTUIR\6 semestr\MOiU\Lr1\obj\Debug\net5.0\Lr1.GeneratedMSBuildEditorConfig.editorconfig
+C:\PTUIR\6 semestr\MOiU\Lr1\obj\Debug\net5.0\Lr1.AssemblyInfoInputs.cache
+C:\PTUIR\6 semestr\MOiU\Lr1\obj\Debug\net5.0\Lr1.AssemblyInfo.cs
+C:\PTUIR\6 semestr\MOiU\Lr1\obj\Debug\net5.0\Lr1.csproj.CoreCompileInputs.cache
+C:\PTUIR\6 semestr\MOiU\Lr1\obj\Debug\net5.0\Lr1.dll
+C:\PTUIR\6 semestr\MOiU\Lr1\obj\Debug\net5.0\ref\Lr1.dll
+C:\PTUIR\6 semestr\MOiU\Lr1\obj\Debug\net5.0\Lr1.pdb
+C:\PTUIR\6 semestr\MOiU\Lr1\obj\Debug\net5.0\Lr1.genruntimeconfig.cache
