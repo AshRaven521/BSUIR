@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "bUBeeoExaO7SJbSLRgwTilBaPTZeiyux6Yhy1yJ58EWsag6KoBWdEdu0mab/KzoTNMgEOdm3dYPLw0fpGKKu+A==",
+  "success": true,
+  "projectFilePath": "C:\\PTUIR\\6 semestr\\MOiU\\Lr2_test\\Lr2_test.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Ivan\\.nuget\\packages\\mathnet.numerics\\4.15.0\\mathnet.numerics.4.15.0.nupkg.sha512"
+  ],
+  "logs": []
+}
