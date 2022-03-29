@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "7K3tkJM5Awtu4ypT3tsJAArA/erR55i/6ikJF/5vWVVc0yb1jF8P85O83FvYpoJ61HfvQrj5Wuyf4pHRKVSyAQ==",
+  "success": true,
+  "projectFilePath": "C:\\PTUIR\\6 semestr\\MOiU\\Lr3\\Lr3.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Ivan\\.nuget\\packages\\mathnet.numerics\\4.15.0\\mathnet.numerics.4.15.0.nupkg.sha512",
+    "C:\\Users\\Ivan\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Ivan\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
+    "C:\\Users\\Ivan\\.nuget\\packages\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",
+    "C:\\Users\\Ivan\\.nuget\\packages\\system.runtime\\4.3.0\\system.runtime.4.3.0.nupkg.sha512"
+  ],
+  "logs": []
+}
