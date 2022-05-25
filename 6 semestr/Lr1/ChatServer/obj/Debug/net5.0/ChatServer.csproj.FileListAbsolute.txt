@@ -1,0 +1,16 @@
+C:\PTUIR\6 semestr\ITiROD\Lr1\ChatServer\bin\Debug\net5.0\ChatServer.exe
+C:\PTUIR\6 semestr\ITiROD\Lr1\ChatServer\bin\Debug\net5.0\ChatServer.deps.json
+C:\PTUIR\6 semestr\ITiROD\Lr1\ChatServer\bin\Debug\net5.0\ChatServer.runtimeconfig.json
+C:\PTUIR\6 semestr\ITiROD\Lr1\ChatServer\bin\Debug\net5.0\ChatServer.runtimeconfig.dev.json
+C:\PTUIR\6 semestr\ITiROD\Lr1\ChatServer\bin\Debug\net5.0\ChatServer.dll
+C:\PTUIR\6 semestr\ITiROD\Lr1\ChatServer\bin\Debug\net5.0\ref\ChatServer.dll
+C:\PTUIR\6 semestr\ITiROD\Lr1\ChatServer\bin\Debug\net5.0\ChatServer.pdb
+C:\PTUIR\6 semestr\ITiROD\Lr1\ChatServer\obj\Debug\net5.0\ChatServer.csproj.AssemblyReference.cache
+C:\PTUIR\6 semestr\ITiROD\Lr1\ChatServer\obj\Debug\net5.0\ChatServer.GeneratedMSBuildEditorConfig.editorconfig
+C:\PTUIR\6 semestr\ITiROD\Lr1\ChatServer\obj\Debug\net5.0\ChatServer.AssemblyInfoInputs.cache
+C:\PTUIR\6 semestr\ITiROD\Lr1\ChatServer\obj\Debug\net5.0\ChatServer.AssemblyInfo.cs
+C:\PTUIR\6 semestr\ITiROD\Lr1\ChatServer\obj\Debug\net5.0\ChatServer.csproj.CoreCompileInputs.cache
+C:\PTUIR\6 semestr\ITiROD\Lr1\ChatServer\obj\Debug\net5.0\ChatServer.dll
+C:\PTUIR\6 semestr\ITiROD\Lr1\ChatServer\obj\Debug\net5.0\ref\ChatServer.dll
+C:\PTUIR\6 semestr\ITiROD\Lr1\ChatServer\obj\Debug\net5.0\ChatServer.pdb
+C:\PTUIR\6 semestr\ITiROD\Lr1\ChatServer\obj\Debug\net5.0\ChatServer.genruntimeconfig.cache
