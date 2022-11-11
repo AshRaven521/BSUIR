@@ -1,0 +1,16 @@
+C:\PTUIR\7 semestr\SAiIO\Lr2\bin\Debug\net5.0\Lr2.exe
+C:\PTUIR\7 semestr\SAiIO\Lr2\bin\Debug\net5.0\Lr2.deps.json
+C:\PTUIR\7 semestr\SAiIO\Lr2\bin\Debug\net5.0\Lr2.runtimeconfig.json
+C:\PTUIR\7 semestr\SAiIO\Lr2\bin\Debug\net5.0\Lr2.runtimeconfig.dev.json
+C:\PTUIR\7 semestr\SAiIO\Lr2\bin\Debug\net5.0\Lr2.dll
+C:\PTUIR\7 semestr\SAiIO\Lr2\bin\Debug\net5.0\ref\Lr2.dll
+C:\PTUIR\7 semestr\SAiIO\Lr2\bin\Debug\net5.0\Lr2.pdb
+C:\PTUIR\7 semestr\SAiIO\Lr2\obj\Debug\net5.0\Lr2.csproj.AssemblyReference.cache
+C:\PTUIR\7 semestr\SAiIO\Lr2\obj\Debug\net5.0\Lr2.GeneratedMSBuildEditorConfig.editorconfig
+C:\PTUIR\7 semestr\SAiIO\Lr2\obj\Debug\net5.0\Lr2.AssemblyInfoInputs.cache
+C:\PTUIR\7 semestr\SAiIO\Lr2\obj\Debug\net5.0\Lr2.AssemblyInfo.cs
+C:\PTUIR\7 semestr\SAiIO\Lr2\obj\Debug\net5.0\Lr2.csproj.CoreCompileInputs.cache
+C:\PTUIR\7 semestr\SAiIO\Lr2\obj\Debug\net5.0\Lr2.dll
+C:\PTUIR\7 semestr\SAiIO\Lr2\obj\Debug\net5.0\ref\Lr2.dll
+C:\PTUIR\7 semestr\SAiIO\Lr2\obj\Debug\net5.0\Lr2.pdb
+C:\PTUIR\7 semestr\SAiIO\Lr2\obj\Debug\net5.0\Lr2.genruntimeconfig.cache
