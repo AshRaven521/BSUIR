@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "zAfwp/uFq61YVw8pjyZ30GSj8b7kqPOzyDh3mBDhLhA7SIS1PZyxX85+w1CgSCzL3iGO6tIrxxV60cu0qN1h/A==",
+  "dgSpecHash": "seNRczIfJ2RDhwZf352MAIkNYnaZuk78VGFPToPqTlrJYABYbaINrOT2nuyQIPuP7kct5jvE1Q3uFpIOCWl3Dg==",
   "success": true,
   "projectFilePath": "C:\\PTUIR\\7 semestr\\SAiIO\\Lr2\\Lr2.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Ivan\\.nuget\\packages\\mathnet.numerics\\5.0.0\\mathnet.numerics.5.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

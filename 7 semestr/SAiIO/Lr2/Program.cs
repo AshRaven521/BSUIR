@@ -1,107 +1,86 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using MathNet.Numerics.LinearAlgebra;
 
-namespace Lr2
+namespace Lr1
 {
     class Program
     {
-        private static Stack<GraphNode> stack = new Stack<GraphNode>();
-        private static List<GraphNode> graph = new List<GraphNode>();
         static void Main(string[] args)
         {
-            int start = 0;
-            int finish = 5;
+            var matrixA = Matrix<double>.Build.DenseOfArray(new double[,] { { 3, 2, 1, 0},
+                                                                            { -3, 2, 0, 1} });
+            var vectorB = Vector<double>.Build.DenseOfArray(new double[] { 6, 0 });
 
-            graph.Add(new GraphNode(0, "gray", 1, 1));
-            graph.Add(new GraphNode(0, "white", 2, 2));
-            graph.Add(new GraphNode(1, "white", 2, 2));
-            graph.Add(new GraphNode(1, "white", 4, 1));
-            graph.Add(new GraphNode(2, "white", 3, 1));
-            graph.Add(new GraphNode(3, "white", 4, 2));
-            graph.Add(new GraphNode(3, "white", 5, 1));
-            graph.Add(new GraphNode(4, "white", 5, 2));
-            graph.Add(new GraphNode(5, "white"));
+            var result = ClippingPlaneMethod(matrixA, vectorB);
 
-            var (opt, x) = STPath(start, finish, graph);
-            foreach (var item in opt)
+            foreach (var res in result)
             {
-                Console.WriteLine($"Элемент массива opt: {item}");
+                Console.WriteLine($"Элемент итогового списка: {res}");
             }
-            foreach (var item in x)
-            {
-                Console.WriteLine($"Элемент массива x: {item}");
-            }
+
+            Console.ReadKey();
         }
 
-        private static void DFS(GraphNode node)
+        private static double GetFractionPart(double num)
         {
-            node.Color = "gray";
-            foreach (var item in graph)
-            {
-                if (item.Color == "white")
-                {
-                    DFS(item);
-                }
-            }
-
-            stack.Push(node);
+            return num - Math.Floor(num);
         }
 
-        private static Tuple<double[], double?[]> STPath(int source, int target, List<GraphNode> graphNodes)
+        private static List<double> ClippingPlaneMethod(Matrix<double> matrixA, Vector<double> vectorB)
         {
-            try
+            var res = Simplex.StartSimplexMethod(matrixA, vectorB);
+            var vectorX = Vector<double>.Build.DenseOfArray(res.Item1.ToArray());
+            var dirtBasis = res.Item2;
+
+            // Проверяем, все ли числа в векторе целые
+            if (vectorX.All(d => Math.Abs(d % 1) <= (Double.Epsilon * 100)))
             {
+                return vectorX.ToList();
+            }
 
-                DFS(graphNodes.ElementAt(source));
+            var basis = dirtBasis.Select(x => x - 1);
 
-                stack = new Stack<GraphNode>(stack.Reverse().ToList());
+            var bruh = new Dictionary<int, double>();
+            // Заполняем словарь(ключ = i, значение = vectorX[i])
+            for (int i = 0; i < vectorX.Count; i++)
+            {
+                bruh.Add(i, vectorX[i]);
+            }
 
-                int startIndex = stack.ToList().FindIndex(x => x.Source == source);
-                int finishIndex = stack.ToList().FindIndex(x => x.Destination == target);
+            var notBasis = bruh.Keys.Where(i => !basis.Contains(i));
 
-                if (startIndex > finishIndex)
+            var matrixAb = Matrix<double>.Build.DenseOfColumns(basis.Select(i => matrixA.Column((int)i)));
+            var matrixAn = Matrix<double>.Build.DenseOfColumns(notBasis.Select(i => matrixA.Column(i)));
+            var multipleRes = matrixAb.Inverse() * matrixAn;
+
+            // Находим индекс нецелого числа в vectorX
+            int index = vectorX.ToList().FindIndex(x => !(Math.Abs(x % 1) <= (Double.Epsilon * 100)));
+
+            double k = basis.ElementAt(index);
+
+            var fractions = multipleRes.Row((int)k).Select(GetFractionPart);
+
+            double[] arr = new double[vectorX.Count];
+
+            for (int i = 0; i < arr.Length; i++)
+            {
+                int ind = notBasis.ToList().IndexOf(i);
+                if (ind != -1)
                 {
-                    throw new Exception("Нет пути!");
+                    arr[i] = fractions.ElementAt(ind);
                 }
-
-                var sortedSources = new SortedSet<int>(stack.Select(x => x.Source));
-
-                double[] opt = new double[sortedSources.Count];
-                Array.Fill(opt, Double.NegativeInfinity);
-
-                double?[] x = new double?[sortedSources.Count];
-                Array.Fill(x, 0);
-
-                opt[source] = 0;
-                x[source] = null;
-
-                sortedSources.ToList().ForEach((sor) =>
+                else
                 {
-                    
-                    stack.ToList()
-                    .ForEach((s) =>
-                    {
-                        if (s.Destination == sor)
-                        {
-                            var cur = sortedSources.ElementAt(s.Source);
-                            if (s.Weight + opt[cur] > opt[sor])
-                            {
-                                opt[sor] = s.Weight + opt[cur];
-                                x[sor] = s.Source;
-                            }
-                        }
-                    });
-                });
-
-                return Tuple.Create(opt, x);
+                    arr[i] = 0.0;
+                }
             }
+            double fractionPart = GetFractionPart(vectorX[(int)k]);
 
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Произошла ошибка: {ex.Message}");
-                return Tuple.Create(new double[1], new double?[1]);
-            }
+            var resVector = arr.Append(-1.0).Append(fractionPart).ToList();
+
+            return resVector;
         }
     }
 }
