@@ -1,0 +1,15 @@
+D:\ПТУИР\GitHub\BSUIR\7 semestr\SAiIO\Lr4\bin\Debug\net6.0\Lr4.exe
+D:\ПТУИР\GitHub\BSUIR\7 semestr\SAiIO\Lr4\bin\Debug\net6.0\Lr4.deps.json
+D:\ПТУИР\GitHub\BSUIR\7 semestr\SAiIO\Lr4\bin\Debug\net6.0\Lr4.runtimeconfig.json
+D:\ПТУИР\GitHub\BSUIR\7 semestr\SAiIO\Lr4\bin\Debug\net6.0\Lr4.dll
+D:\ПТУИР\GitHub\BSUIR\7 semestr\SAiIO\Lr4\bin\Debug\net6.0\Lr4.pdb
+D:\ПТУИР\GitHub\BSUIR\7 semestr\SAiIO\Lr4\obj\Debug\net6.0\Lr4.csproj.AssemblyReference.cache
+D:\ПТУИР\GitHub\BSUIR\7 semestr\SAiIO\Lr4\obj\Debug\net6.0\Lr4.GeneratedMSBuildEditorConfig.editorconfig
+D:\ПТУИР\GitHub\BSUIR\7 semestr\SAiIO\Lr4\obj\Debug\net6.0\Lr4.AssemblyInfoInputs.cache
+D:\ПТУИР\GitHub\BSUIR\7 semestr\SAiIO\Lr4\obj\Debug\net6.0\Lr4.AssemblyInfo.cs
+D:\ПТУИР\GitHub\BSUIR\7 semestr\SAiIO\Lr4\obj\Debug\net6.0\Lr4.csproj.CoreCompileInputs.cache
+D:\ПТУИР\GitHub\BSUIR\7 semestr\SAiIO\Lr4\obj\Debug\net6.0\Lr4.dll
+D:\ПТУИР\GitHub\BSUIR\7 semestr\SAiIO\Lr4\obj\Debug\net6.0\refint\Lr4.dll
+D:\ПТУИР\GitHub\BSUIR\7 semestr\SAiIO\Lr4\obj\Debug\net6.0\Lr4.pdb
+D:\ПТУИР\GitHub\BSUIR\7 semestr\SAiIO\Lr4\obj\Debug\net6.0\Lr4.genruntimeconfig.cache
+D:\ПТУИР\GitHub\BSUIR\7 semestr\SAiIO\Lr4\obj\Debug\net6.0\ref\Lr4.dll
