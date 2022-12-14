@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\PTUIR\\7 semestr\\SAiIO\\Lr4\\Lr4.csproj": {}
+    "C:\\PTUIR\\7 semestr\\SAiIO\\Lr6\\Lr6.csproj": {}
   },
   "projects": {
-    "C:\\PTUIR\\7 semestr\\SAiIO\\Lr4\\Lr4.csproj": {
+    "C:\\PTUIR\\7 semestr\\SAiIO\\Lr6\\Lr6.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\PTUIR\\7 semestr\\SAiIO\\Lr4\\Lr4.csproj",
-        "projectName": "Lr4",
-        "projectPath": "C:\\PTUIR\\7 semestr\\SAiIO\\Lr4\\Lr4.csproj",
+        "projectUniqueName": "C:\\PTUIR\\7 semestr\\SAiIO\\Lr6\\Lr6.csproj",
+        "projectName": "Lr6",
+        "projectPath": "C:\\PTUIR\\7 semestr\\SAiIO\\Lr6\\Lr6.csproj",
         "packagesPath": "C:\\Users\\Ivan\\.nuget\\packages\\",
-        "outputPath": "C:\\PTUIR\\7 semestr\\SAiIO\\Lr4\\obj\\",
+        "outputPath": "C:\\PTUIR\\7 semestr\\SAiIO\\Lr6\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -24,7 +24,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net6.0"
+          "net5.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -32,8 +32,8 @@
           "https://nuget.devexpress.com/quERpCjqocbMMXmFdx4Cxj3r5YDirufOdJT7gLH5MiuFNCdOLr/api": {}
         },
         "frameworks": {
-          "net6.0": {
-            "targetAlias": "net6.0",
+          "net5.0": {
+            "targetAlias": "net5.0",
             "projectReferences": {}
           }
         },
@@ -44,8 +44,14 @@
         }
       },
       "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "MathNet.Numerics": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -56,6 +62,11 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.414\\RuntimeIdentifierGraph.json"
         }
       }
